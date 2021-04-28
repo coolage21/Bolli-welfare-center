@@ -1,0 +1,209 @@
+/*헤더*/
+header {
+    top:0;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index:99999;
+}
+
+/*로고*/
+header > .header-logo {
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+header > .header-logo > img {
+    width: inherit;
+}
+
+/*서브메뉴 - 홈, 오시는길, 인트라넷*/
+header > .submenu {
+    padding: 10px 30px 0 0; 
+}
+.submenu > ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.submenu > ul > li:not(:last-child) {
+    margin-right: 20px;
+}
+
+/*메인메뉴*/
+.mainmenu {
+    border-bottom: 2px solid var(--color-gray); 
+}
+.mainmenu > .mainmenu-wrap > nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px; 
+}
+
+/*메인메뉴 목록*/
+.mainmenu > .mainmenu-wrap > nav > ul > li{
+    display: inline-block;
+    position: relative;
+    z-index: 999999;
+}
+.mainmenu > .mainmenu-wrap > nav > ul > li > a {
+    display: block;
+    height: 50px;
+    width: 150px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.25rem;/*---------폰트사이즈----------------*/
+    font-weight: 600;
+    position: relative;
+}
+
+.mainmenu > .mainmenu-wrap > nav > ul > li > a:after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -3px;
+    background-color: var(--color-main);
+    transition: 300ms;
+}
+.mainmenu > .mainmenu-wrap > nav > ul > li:hover > a:after {
+    content: '';
+    width: 100%;
+}
+
+/*메인메뉴 하위목록*/
+.mainmenu > .mainmenu-wrap > nav > ul ul {
+    background-color: white;
+    width: 100vw;
+    height: 300px;
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms;
+    z-index: -1;
+    border: 1px solid var(--color-lightgray);
+}
+.mainmenu > .mainmenu-wrap > nav > ul:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+.mainmenu > .mainmenu-wrap > nav > ul ul li a {
+    padding:10px;
+    display: block;
+    width: inherit;
+    height: inherit;
+    transition: 200ms;
+}
+.mainmenu > .mainmenu-wrap > nav > ul ul li a:hover {
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-color: var(--color-lightgray);
+}
+
+/*전체메뉴*/
+.open-button {
+    border: none;
+    background-color: transparent;
+    position: absolute; 
+    top: 46px;
+    right: 30px;
+}
+.open-button > .fa-bars {
+    font-size: 1.25rem;
+}
+
+.allmenu-wrap {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    transition: 300ms;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:9999999;
+    visibility: hidden;
+}
+.allmenu-wrap.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.allmenu-container {
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.allmenu-container h2 {
+    font-size: 1.75rem;/*---------폰트사이즈----------------*/
+    margin-bottom: 10px;
+}
+
+.allmenu-container span {
+    display: block;
+    height: 2px;
+    background-color: var(--color-main);
+    margin-bottom: 30px;
+}
+
+.allmenu-container .close-button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-gray);
+    line-height: 30px;
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 1.25rem;/*---------폰트사이즈----------------*/
+    color: var(--color-gray);
+}
+
+.allmenu-container .allmenu-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.allmenu-item > li > a {
+    display: block;
+    color: var(--color-main);
+    font-weight: 800;
+    font-size: 1.1rem;/*---------폰트사이즈----------------*/
+    margin-bottom: 20px;
+}
+
+.allmenu-item > li > ul > li > a {
+    font-size: 1rem;/*---------폰트사이즈----------------*/
+    display: block;
+    margin: 7px 0;
+}
+
+.allmenu-item>li>ul>li>a:before {
+    content: '·';
+    color: var(--color-main);
+    margin-right: 4px;
+}
+
+.allmenu-item > li > ul > li > ul > li > a {
+    color: var(--color-lightblue);
+    display: block;
+    font-size: 0.9rem;/*---------폰트사이즈----------------*/
+}
+
+.allmenu-item > li > ul > li > ul > li a::before {
+    content: '-';
+    margin: 0 5px 0 10px;
+}

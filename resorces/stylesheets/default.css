@@ -1,14 +1,17 @@
 body{
-    background-color: wheat;
+
     margin:0;
     font-family:'NanumSquare',san-serif;
     font-size:17px;
     line-height:1.5;
     font-size: 1rem;
+    padding-top: 84px;
     }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
+    font-size: 1rem;
+    font-weight: normal;
 }
 .hide {
     position: absolute;
@@ -19,6 +22,7 @@ a {
     text-decoration: none;
     color: black;
     margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -29,6 +33,7 @@ ul {
 
 button {
     cursor: pointer;
+    background-color: transparent;
 }
 
 .skip {
@@ -58,6 +63,8 @@ button {
       --size-button: 60px;
     /*animation*/
       --animation-duration: 300ms
+    /*font-size*/
+    
   }
   
   

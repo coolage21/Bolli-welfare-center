@@ -12,10 +12,9 @@
     <!--css-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <!--폰트-->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-  /><!--폰트어썸-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <!--폰트어썸-->
+    <script defer src="resorces/script/main.js"></script>
 </head>
 
 <body>
@@ -95,11 +94,11 @@
         </div>
         <div class="allmenu">
             <h2 class="hide">전체메뉴</h2>
-            <div>
-                <button class="open-button">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+
+            <button class="open-button">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <!-- <div class="allmenu-wrap"> -->
             <div class="allmenu-wrap">
                 <div class="allmenu-container">
@@ -177,8 +176,8 @@
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-    
-    
+
+
             </div>
             <!-- </div> -->
         </div>
@@ -186,24 +185,81 @@
 
     </header>
     <main>
-        <section>
+        <section class="main-visual">
 
+        </section>
+        <section class="main-news">
+            <article class="service">
+                <div class="service-item">
+                    <div class="service-text">
+                        <h3><a href="">늘봄심리상담센터</a></h3>
+                        <p><a href="">보건복지부 바우처 이용가능</a></p>
+                    </div>
+                    <div class="service-image">
+                        <a href=""><img src="./resorces/images/main/counsel.png" alt="늘봄심리상담센터"></a>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div>
+                        <p><a href="">사지마세요 party용품</a></p>
+                        <h3><a href="">사파리하우스</a></h3>
+                        <p><a href="">파티용품 대여하기</a></p>
+                    </div>
+                    <div class="service-image">
+                        <a href=""><img src="./resorces/images/main/party.png" alt="사파리하우스"></a>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div>
+                        <p><a href="">중소상공인나눔실천 캠페인</a></p>
+                        <h3><a href="">홀트패밀리</a></h3>
+                    </div>
+                    <div class="service-image">
+                        <a href=""><img src="./resorces/images/main/holt-gray.png" alt="홀트패밀리"></a>
+                    </div>
+                </div>
+            </article>
+            <article class="notice">
+                <div class="notice-item notice-list">
+                    <h3><a href="#notice">공지사항</a></h3>
+                    <div>
+                        <span><a href="#none">2021 우리들은 자란데이(Day)! 참가자모집</a></span>
+                        <span><a href="#none"> 2021 코로나블루 예방 정서지원사업 자원봉사자 모집 </a></span>
+                        <span><a href="#none">경력단절여성 취·창업을 위한 SNS 마케터 교육 참가자 모집 </a></span>
+                        <span><a href="#none"> 본리복지관 늘봄상담센터 상담사(놀이) 모집</a></span>
+                        <span><a href="#none">2021년 1분기 운영위원회 정기회의 개최 결과</a></span>
+                    </div>
+                    <button>전체보기 &#62;</button>
+                </div>
+                <div class="notice-item edu-program">
+                    <a href="#none">
+                        <h3>교육 프로그램</h3>
+                        <p>건강, 어학, 교양 등<br>
+                            각종 문화교육강좌 수강안내
+                        </p>
+                    </a>
+                </div>
+            </article>
+        </section>
+        <section class="main-activity">
+            <div class="activity-wrap">
+                <div class="activity-item activity-text">
+                    <h2>현장이야기</h2>
+                    <p>사진으로 보는 <span>본리종합사회복지관 소식</span>입니다.</p>
+                </div>
+                <div class="activity-item activity-content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <button>전체보기 &#62;</button>
+            </div>
         </section>
     </main>
     <footer>
 
     </footer>
-    <script>
-        let openButton = document.querySelector('.open-button');
-        let allmenuWrap = document.querySelector('.allmenu-wrap');
-     openButton.addEventListener('click', function () {
-            allmenuWrap.classList.add('visible');
-        })
-        let closeButton = document.querySelector('.close-button');
-        closeButton.addEventListener('click', function () {
-            allmenuWrap.classList.remove('visible');
-        });
-    </script>
+
 </body>
 
 </html>
