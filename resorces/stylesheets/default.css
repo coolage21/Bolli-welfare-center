@@ -31,6 +31,10 @@ ul {
     margin: 0;
 }
 
+em {
+    font-style: normal
+}
+
 button {
     cursor: pointer;
     background-color: transparent;
@@ -55,10 +59,12 @@ button {
 :root {
     /*color*/
     --color-main: rgb(0, 100, 230);
-    --color-lightblue: rgb(80, 200, 255);
+    --color-lightblue: rgb(230, 250, 255);
     --color-black: rgb(0, 0, 0);
     --color-gray: rgb(143, 143, 143);
     --color-lightgray: rgb(236, 236, 236);
+    --color-orange: rgb(235, 121, 133);
+    --color-lightorange: rgb(251, 228, 231);
     /*size*/
       --size-button: 60px;
     /*animation*/
