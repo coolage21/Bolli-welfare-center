@@ -8,6 +8,11 @@
     <title>달서구본리종합사회복지관</title>
     <link rel="shortcut icon" href="./resorces/images/main/bolli_favicon.ico">
     <!--파피콘-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--제이쿼리먼저-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--slickslider-->
     <link rel="stylesheet" href="./resorces/stylesheets/common.css">
     <!--css-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
@@ -251,7 +256,7 @@
                                 각종 문화교육강좌 수강안내
                             </p>
                         </div>
-                    </a>    
+                    </a>
                 </div>
             </article>
         </section>
@@ -410,10 +415,31 @@
                 </div>
             </div>
         </section>
-        <section class="main-sponser">
-            <h3>홀트패밀리</h3>
-            <div>
-                <a href=""><img src="" alt=""></a>
+        <section class="main-partner">
+            <div class="partner-wrap">
+                <h3>홀트패밀리</h3>
+                <div class="partner-slider">
+                    <a href=""><img src="./resorces/images/main/woochang.png" alt="우창"></a>
+                    <a href=""><img src="./resorces/images/main/더열린병원.png" alt="더열린병원"></a>
+                    <a href=""><img src="./resorces/images/main/seonjin.png" alt="선진정밀"></a>
+                    <a href=""><img src="./resorces/images/main/donggung.png" alt="동궁찜닭"></a>
+                    <a href=""><img src="./resorces/images/main/wedding.png" alt="파라다이스웨딩"></a>
+                    <a href="">광장꽃집</a>
+                    <a href="">법무사유병종사무소</a>
+                    <a href="">자인떡방앗간</a>
+                    <a href="">머릿결사랑 본리점</a>
+                    <a href="">카이스트 안경콘택트</a>
+                    <a href="">삼천포횟집</a>
+                    <a href=""><img src="./resorces/images/main/daol.png" alt="다올여행사"></a>
+                    <a href=""><span>여수처갓집김치</span></a>
+                    <a href=""><img src="./resorces/images/main/seohan.png" alt="서한정공"></a>
+                    <a href="">대구가족상담복지센터</a>
+                    <a href="">대원건어물</a>
+                    <a href=""><img src="./resorces/images/main/kimsinhang.png" alt="김신향소아청소년과"></a>
+                    <a href=""><img src="./resorces/images/main/bplab.png" alt="bplab"></a>
+                    <a href=""><img src="./resorces/images/main/dalseomarket.png" alt="달서시장"></a>
+                </div>
+               
             </div>
         </section>
     </main>
@@ -436,8 +462,10 @@
                     <img src="./resorces/images/main/bolli_logo_02.png" alt="본리종합사회복지관">
                 </a>
                 <p>대구광역시 달서구 당산로 37-14 본리종합사회복지관<br>
-                    <strong>Tel</strong> 053-563-1007    <strong>Fax</strong> 053-563-2332  <strong>E-mail</strong> bolli1007@holt.or.kr<br>
-                   Copyright &copy; 2014 BOLLI COMMUNITY SERVICE CENTER. All rights reserved. </p>
+                    <strong>Tel</strong> 053-563-1007 <strong>Fax</strong> 053-563-2332 <strong>E-mail</strong>
+                    bolli1007@holt.or.kr<br>
+                    Copyright &copy; 2014 BOLLI COMMUNITY SERVICE CENTER. All rights reserved.
+                </p>
             </div>
             <div class="sns-site">
                 <a href="#none"><img src="./resorces/images/main/kakao.png" alt="kakao"></a>
@@ -446,7 +474,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        $('.partner-slider').slick({
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            // vertical: true,
+            // verticalSwiping: true,
+            speed: 1000
+        });
 
+    </script>
 </body>
 
 </html>

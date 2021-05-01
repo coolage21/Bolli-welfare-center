@@ -651,6 +651,71 @@ ul.other-site li:nth-child(3){
 
 
 /*홀트패밀리*/
-.main-sponser {
+.main-partner {
     background-color: var(--color-lightgray);
+}
+
+.main-partner .partner-wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* border : 1px solid red; */
+}
+
+.main-partner .partner-wrap h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.main-partner .partner-wrap .partner-slider a {
+    border: 1px solid var(--color-gray);
+    height: 40px;
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.main-partner .partner-wrap .partner-slider a img {
+    width: 100%;
+}
+
+.partner-slider .slick-prev,
+.partner-slider .slick-next {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /* color: transparent; */
+    position: absolute;
+    border: 1px solid var(--color-gray);
+    top: -40px;
+    font-size: 0;
+
+}
+.partner-slider .slick-prev {
+    right: 30px;
+}
+.partner-slider .slick-next {
+    right: 0px;
+}
+.partner-slider .slick-prev:before {
+    content:'\f060';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color:black;
+    font-size: 0.7rem;
+}
+
+.partner-slider .slick-next:before {
+    content:'\f061';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color:black;
+    font-size: 0.8rem;
+
 }
