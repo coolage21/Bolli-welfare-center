@@ -1,11 +1,219 @@
-section {
+section:not(.main-visual) {
    padding: 100px 0;
 }
 
-.main-visual {
+/*메인 비주얼*/
+/* .main-visual {
     height: 300px;
     background-color: var(--color-lightblue);
+} */
+
+.main-visual {
+    width: 100%;
+    /* height: 600px; */
+    background-image: url('/resorces/images/main/back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+/*이전,이후 버튼*/
+.visual-slide .slick-prev,
+.visual-slide .slick-next {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 0;
+}
+.visual-slide .slick-prev {
+    left: 120px;
+}
+.visual-slide .slick-next {
+    right: 120px;
+}
+.visual-slide .slick-prev:before {
+    content: '\f060';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: black;
+    font-size: 0.8rem;
+}
+.visual-slide .slick-next:before {
+    content: '\f061';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: black;
+    font-size: 0.8rem;
+}
+
+/*슬라이드버튼*/
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+.slick-dots li {
+    list-style: none;
+    display: inline-block;
+}
+.slick-dots li button {
+    border: none;
+    font-size: 0;
+    width: 30px;
+    height: 7px;
+    margin-right: 5px;
+    background-color: lightblue;
+}
+.slick-dots li.slick-active button {
+    background-color: gray;
+}
+
+/*슬라이드*/
+.visual-slide {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+/*슬라이더*/
+.visual-slider {}
+
+.visual-slider .slider-wrap {
+    width: 75vw;
+    height: 500px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.visual-slider .slider-wrap .slider-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.visual-slider .slider-wrap .slider-text p {
+    margin-bottom: 60px;
+    font-size: 1.25rem;
+}
+
+.visual-slider .slider-wrap .slider-text h2 strong {}
+
+.visual-slider .slider-wrap .slider-text a {
+    display: block;
+    width: 120px;
+    height: 28px;
+    border: 2px solid var(--color-main);
+    border-radius: 20px;
+    color: var(--color-main);
+    background-color: white;
+    text-align: center;
+    line-height: 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 300ms;
+}
+
+.visual-slider .slider-wrap .slider-text a:hover {
+    color: white;
+    background-color: var(--color-main);
+}
+
+.party .slider-img{
+    /* width: 400px; */
+   
+    position: relative;
+}
+
+.party .slider-img > div{
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.3);
+}
+
+.party .slider-img > div.party-img1 {
+    width: 350px; 
+}
+.party .slider-img > div.party-img2 {
+    width: 270px;
+}
+.party .slider-img div img {
+    width: 100%;
+}
+
+.party-img2 {
+    position: absolute;
+    top: 90px;
+    left: -100px;
+}
+
+
+/*파티용품대여*/
+/* .party .slider-img a {
+  
+    position: relative;
+} */
+
+
+
+/*소개, 홀트패밀리, 반찬나눔, 상담*/
+.love-in-action .slider-img,
+.holt-family .slider-img,
+.sharing-dishes .slider-img,
+.counseling .slider-img {
+    display: block;
+    width: 400px;
+}
+
+.sharing-dishes .slider-img,
+.counseling .slider-img {
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.3);
+}
+
+.love-in-action .slider-img img,
+.holt-family .slider-img img,
+.sharing-dishes .slider-img img,
+.counseling .slider-img img {
+    width: 100%;
+}
+
+
+.love-in-action .slider-text p span {
+    display:inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+.sharing-dishes .slider-text p span {
+    font-size: 0.9rem;
+    color: gray;
+}
+.sharing-dishes .slider-text > span {
+    display: inline-block;
+    padding:3px 17px;
+    border: 2px solid var(--color-main);
+    border-radius: 20px;
+    color: var(--color-main);
+    background-color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+
+
 
 /*메인뉴스*/
 .main-news {
@@ -22,21 +230,35 @@ section {
 .main-news > article.service {
     margin-bottom: 40px;
 }
-.main-news > article.service > div {
+.main-news > article.service .service-item {
     flex: 1;
     border-right : 1px solid var(--color-gray);
     padding: 20px 40px;
     box-sizing: border-box;
-}
-.main-news > article.service > div:last-child {
-    border: none;
-}
-.main-news > article.service > .service-item {
+    transition: 300ms;
     display : flex;
     justify-content: space-between;
     align-items: center;
 }
-.main-news > article.service > .service-item h3 {
+.main-news > article.service .service-item.service-counseling:hover{
+    background-color: var(--color-lightorange);
+}
+.main-news > article.service .service-item.service-party:hover{
+    background-color: var(--color-lightblue);
+}
+.main-news > article.service .service-item.service-holt:hover{
+    background-color: var(--color-lightgray);
+}
+
+.main-news > article.service .service-item:hover .service-image{
+    transform: scale(1.05);
+}
+
+.main-news > article.service > div:last-child {
+    border: none;
+}
+
+.service-item > .service-text h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 10px;
@@ -44,15 +266,15 @@ section {
 .service-item > .service-image {
     width: 80px;
     height: 80px;
+    transition: 300ms;
 }
-.service-image a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.service-image a img {
+
+.service-image img {
+    display:block;
     width: 100%;
 }
+
+
 
 /*공지사항, 교육 프로그램*/
 .notice-item {
@@ -91,6 +313,7 @@ section {
     top: 35px;
     right: 20px;
 }
+
 
 /*교육프로그램*/
 .edu-program {}
@@ -668,7 +891,6 @@ ul.other-site li:nth-child(3){
     margin-bottom: 10px;
 }
 
-
 .main-partner .partner-wrap .partner-slider a {
     border: 1px solid var(--color-gray);
     height: 40px;
@@ -695,13 +917,13 @@ ul.other-site li:nth-child(3){
     border: 1px solid var(--color-gray);
     top: -40px;
     font-size: 0;
-
 }
+
 .partner-slider .slick-prev {
-    right: 30px;
+    right:30px
 }
 .partner-slider .slick-next {
-    right: 0px;
+    right:0px
 }
 .partner-slider .slick-prev:before {
     content:'\f060';

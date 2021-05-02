@@ -50,7 +50,8 @@ button {
     text-align: center;
     background-color: black;
     color: white;
-    transition: 0.5s   
+    transition: 0.5s;                        
+    z-index:99999999999999999999999999; 
 }
 .skip:focus {
     top: 0;
@@ -59,6 +60,7 @@ button {
 :root {
     /*color*/
     --color-main: rgb(0, 100, 230);
+    --color-blue: rgb(100, 200, 255);
     --color-lightblue: rgb(230, 250, 255);
     --color-black: rgb(0, 0, 0);
     --color-gray: rgb(143, 143, 143);
