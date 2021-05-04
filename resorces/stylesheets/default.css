@@ -1,5 +1,4 @@
 body{
-
     margin:0;
     font-family:'NanumSquare',san-serif;
     font-size:17px;
@@ -17,29 +16,24 @@ h1, h2, h3, h4, h5, h6, p {
     position: absolute;
     left:-300%;
 }
-
 a {
     text-decoration: none;
     color: black;
     margin: 0;
     padding: 0;
 }
-
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 em {
     font-style: normal
 }
-
 button {
     cursor: pointer;
     background-color: transparent;
 }
-
 .skip {
     position: absolute;
     left: 0;
@@ -56,7 +50,6 @@ button {
 .skip:focus {
     top: 0;
 }
-
 :root {
     /*color*/
     --color-main: rgb(0, 100, 230);
@@ -67,18 +60,15 @@ button {
     --color-lightgray: rgb(236, 236, 236);
     --color-orange: rgb(235, 121, 133);
     --color-lightorange: rgb(251, 228, 231);
-    /*size*/
-      --size-button: 60px;
+
     /*animation*/
-      --animation-duration: 300ms
-    /*font-size*/
-    
-  }
-  
-  
-  /* 적용
-  div {
-  background-color: var(--color-black)
-  width: var(--size-button)
-  transition: transform var(--animation-duration) ease;
-  } */
+    --animation-basic: 300ms;
+    --animation-fast: 150ms;
+    --animation-slow: 1s;
+
+    /*font-size(sub-page)*/
+    --subpage-title: 2rem; /*h2*/
+    --subpage-subtitle: 1.75rem; /*h3*/
+    --subpage-main-text: 1.25rem;
+
+}
