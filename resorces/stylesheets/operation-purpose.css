@@ -1,4 +1,5 @@
-/*서브비주얼*/
+
+/*00서브비주얼*/
 .sub-visual {
     position: relative;
     color: white;
@@ -44,7 +45,7 @@
     font-size: 2rem;
 }
 
-/*메뉴*/
+/*00메뉴*/
 nav.intro-tab {
     position: relative;
     top: -63px;
@@ -90,14 +91,14 @@ section.sub-content {
     left: 50%;
     transform: translateX(-50%);
 }
-/*페이지 순서*/
+/*00페이지 순서*/
 .page-top {
     font-size: 0.8rem;
     color: var(--color-gray);
     text-align: right;
     margin-bottom: 20px;
 }
-/*타이틀*/
+/*00타이틀*/
 section.sub-content .sub-content-title {
     text-align: center; 
     margin-bottom: 80px; 
@@ -108,11 +109,12 @@ section.sub-content .sub-content-title h2 {
     padding-bottom: 5px;
     border-bottom: 4px solid var(--color-blue)
 }
-/*본문내용*/
+/*00본문내용*/
 section.sub-content .sub-content-item p {
     font-size: 1.25rem;
 }
-/*인사말 내용*/
+
+/*01인사말 내용*/
 section.intro-greeting .greeting-content .greeting-img{
     width: inherit;
     height: 430px;
@@ -153,7 +155,7 @@ section.intro-greeting .greeting-content .greeting-img{
     font-size: 1.5rem;
 }
 
-/*법인소개 내용*/
+/*02법인소개 내용*/
 section.intro-corporation .corporation-content .corporation-img-wrap {
     width: inherit;
     display: flex;
@@ -272,7 +274,7 @@ section.intro-corporation .corporation-content .corporation-img-wrap .corporatio
 .corporation-value h4:before {
     box-shadow: 3px 3px 4px rgba(114, 114, 114, 0.5);
 }
-/*운영목적*/
+/*03운영목적*/
 .purpose-text {
     text-align: center;
     position: relative;
@@ -391,4 +393,197 @@ section.sub-content .sub-content-item .purpose-container .purpose-list-item p{
 }
 .purpose-list-item p strong {
     font-size: 1.75rem;
+}
+
+/*04연혁*/
+.history-container > div {
+    width: 600px;
+    /* background-color: lightcoral; */
+    box-sizing: border-box;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.history-container > div.history-right {
+    margin-left: 50%;
+    padding-left: 40px;
+
+}
+.history-container > div.history-right:before {
+    content: '';
+    left: -1px;
+    top: 0;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color-gray);
+}  
+.history-container > div.history-right:first-child:before {
+    top: 15px;
+    height: calc(100% - 15px);
+}
+
+.history-container > div.history-left {
+    text-align: right;
+    padding-right: 40px;
+}
+.history-container > div.history-left:before {
+    content: '';
+    right: -1px;
+    top: 0;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color-gray);
+}  
+
+.history-container > div > h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+}
+.history-container > div.history-right > h2:before {
+    content:'';
+    position: absolute;
+    left:-48px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--color-orange);
+    background-color: white;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.history-container > div.history-left > h2:before {
+    content:'';
+    position: absolute;
+    right:-48px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--color-orange);
+    background-color: white;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.history-container > div > ol {
+    padding-bottom: 60px;
+}
+
+.history-container > div li {
+    line-height: 35px;
+}
+
+.history-container > div li span {
+    font-weight: 600;
+    color: var(--color-gray);
+}
+
+/*05기관현황*/
+
+/*표*/
+.overview-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top : 3px solid var(--color-main);
+    font-size: 1.25rem;
+}
+.overview-content table tr th,
+.overview-content table tr td {
+    border:1px solid gray;
+    padding: 7px 20px;
+    box-sizing: border-box;
+}
+
+.overview-content table tr th {
+
+    background-color: rgb(248, 248, 248);
+    color: var(--color-main);
+}
+
+.overview-content table caption {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 100px 0 20px 0;
+}
+
+/*06함께하는 사람들*/
+.staff-container input {
+    display: none;
+}
+.staff-content {
+    display: none;
+}
+
+input[id=chart]:checked ~ .slide1,
+input[id=division]:checked ~ .slide2,
+input[id=committee]:checked ~ .slide3{
+    display:block;
+}
+input[id=chart]:checked ~ .staff-btn label[for=chart],
+input[id=division]:checked ~ .staff-btn label[for=division],
+input[id=committee]:checked ~ .staff-btn label[for=committee]{
+    background-color: var(--color-lightblue);
+    font-weight: 600;
+    color: black;
+}
+.staff-btn {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.staff-btn label{
+    display:  inline-block;
+    width: 20%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 1.5rem;
+    border:1px solid var(--color-blue);
+    margin-right: 20px;
+    color: var(--color-gray);
+}
+.staff-btn label:last-child {
+    margin-right: none;
+}
+/*조직도*/
+
+/*업무분장*/
+/*운영위원회*/
+.staff-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top : 3px solid var(--color-main);
+    font-size: 1.25rem;
+}
+.staff-content table tr th,
+.staff-content table tr td {
+    border:1px solid gray;
+    padding: 7px 0;
+    box-sizing: border-box;
+}
+
+.staff-content table tr th {
+    /* width: 180px;
+    height: 30px; */
+    background-color: rgb(248, 248, 248);
+    color: var(--color-main);
+}
+.staff-content table tr td {
+    padding: 7px 20px;
+}
+.staff-content table tr td.center {
+    text-align: center;
+
+}
+.map-content .map-text > div{
+    display: flex;
+}
+.map-content .map-text h4{
+    font-size: 1.5rem;
+    width: 300px;
 }
