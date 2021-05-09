@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달서구본리종합사회복지관</title>
+    <link rel="shortcut icon" href="./resorces/images/main/bolli_favicon.ico">
+    <!--파피콘-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--제이쿼리먼저-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--slickslider-->
+    <link rel="stylesheet" href="./resorces/stylesheets/common.css">
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <!--폰트-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <!--폰트어썸-->
+    <script defer src="resorces/script/header.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="header-logo">
+            <img src="./resorces/images/main/bolli_logo.png" alt="달서구본리종합사회복지관">
+        </a>
+
+        <div class="submenu">
+            <h2 class="hide">
+                서브메뉴
+            </h2>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="#none">오시는길</a></li>
+                <li><a href="#none">인트라넷</a></li>
+            </ul>
+        </div>
+        <div class="mainmenu">
+            <h2 class="hide">
+                대메뉴
+            </h2>
+            <div class="mainmenu-wrap">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="intro.html">복지관소개</a>
+                            <ul>
+                                <li><a href="#none">운영목적 및 목표</a></li>
+                                <li><a href="#none">운영법인 소개</a></li>
+                                <li><a href="#none">기관 현황</a></li>
+                                <li><a href="#none">연혁</a></li>
+                                <li><a href="#none">함께하는 사람들</a></li>
+                                <li><a href="#none">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="management.html">사업소개</a>
+                            <ul>
+                                <li><a href="management.html">사례관리기능</a></li>
+                                <li><a href="#none">서비스제공기능</a></li>
+                                <li><a href="#none">지역조직화기능</a></li>
+                                <li><a href="#none">'늘봄상담심리센터'</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="support.html">후원·자원봉사</a>
+                            <ul>
+                                <li><a href="#none">후원안내</a></li>
+                                <li><a href="support.html">후원신청</a></li>
+                                <li><a href="#none">자원봉사안내</a></li>
+                                <li><a href="#none">자원봉사신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="neighbor.html">캠페인</a>
+                            <ul>
+                                <li><a href="#none">홀트패밀리<br>&#40;기업캠페인&#41;</a></li>
+                                <li><a href="neighbor.html">나눔이 필요한 이웃</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="news.html">본리소식</a>
+                            <ul>
+                                <li><a href="#none">공지사항</a></li>
+                                <li><a href="#none">정보공개</a></li>
+                                <li><a href="news.html">현장이야기</a></li>
+                                <li><a href="#none">본리소식지</a></li>
+                                <li><a href="#none">자유게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <div class="allmenu">
+            <h2 class="hide">전체메뉴</h2>
+            <button class="open-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- <div class="allmenu-wrap"> -->
+            <div class="allmenu-wrap">
+                <div class="allmenu-container">
+                    <h2>전체메뉴</h2>
+                    <span></span>
+                    <ul class="allmenu-item">
+                        <li class="allmenu-list">
+                            <a href="#intro">복지관소개</a>
+                            <ul>
+                                <li><a href="#none">운영목적 및 목표</a></li>
+                                <li><a href="#none">운영법인 소개</a></li>
+                                <li><a href="#none">기관 현황</a></li>
+                                <li><a href="#none">연혁</a></li>
+                                <li>
+                                    <a href="#none">함께하는 사람들</a>
+                                    <ul>
+                                        <li><a href="#none">조직도</a></li>
+                                        <li><a href="#none">업무분장</a></li>
+                                        <li><a href="#none">조직위원회</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="management.html">사업소개</a>
+                            <ul>
+                                <li><a href="management.html">사례관리기능</a></li>
+                                <li>
+                                    <a href="#none">서비스제공기능</a>
+                                    <ul>
+                                        <li><a href="#none">가족기능강화</a></li>
+                                        <li><a href="#none">지역사회보호</a></li>
+                                        <li><a href="#none">교육문화</a></li>
+                                        <li><a href="#none">자활지원 및 기타</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">지역조직화기능</a></li>
+                                <li><a href="#none">'늘봄상담심리센터'</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="support.html">후원·자원봉사</a>
+                            <ul>
+                                <li><a href="#none">후원안내</a></li>
+                                <li><a href="support.html">후원신청</a></li>
+                                <li><a href="#none">자원봉사안내</a></li>
+                                <li><a href="#none">자원봉사신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="neighbor.html">캠페인</a>
+                            <ul>
+                                <li><a href="#none">홀트패밀리&#40;기업캠페인&#41;</a></li>
+                                <li><a href="neighbor.html">나눔이 필요한 이웃</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="news.html">본리소식</a>
+                            <ul>
+                                <li>
+                                    <a href="#none">공지사항</a>
+                                    <ul>
+                                        <li><a href="#none">복지관 교육안내</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">정보공개</a></li>
+                                <li><a href="news.html">현장이야기</a></li>
+                                <li><a href="#none">본리소식지</a></li>
+                                <li><a href="#none">자유게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="close-button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </header>
+    <main>
+        <section class="sub-visual">
+            <div class="sub-visual-img">
+                <img src="./resorces/images/main/smile.jpg" alt="">
+            </div>
+            <div class="sub-visual-title">
+                <span></span>
+                <h2>후원·자원봉사</h2>
+            </div>
+        </section>
+        <nav class="intro-tab">
+            <ul>
+                <li><a href="#none">후원안내</a></li>
+                <li><a href="#none" class="on">후원신청</a></li>
+                <li><a href="#none">자원봉사안내</a></li>
+                <li><a href="#none">자원봉사신청</a></li>
+            </ul>
+        </nav>
+        <section class="sub-content support">
+            <div class="page-top">
+                <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
+                <span>후원·자원봉사&nbsp;&#62;&nbsp;</span>
+                <span><strong>후원신청</strong></span>
+            </div>
+            <div class="sub-content-title">
+                <h2>후원신청</h2>
+            </div>
+            <form class="sub-content-item support-application">
+                <h3>후원신청서</h3>
+                <div class="privacy-policy">
+                    <div>
+                        <p>
+                            본 기관은 개인정보 보호법에 명기된 관련 법률 상의 개인정보처리자가 준수하여야 할 개인정보보호 규정을 준수하며, 관련법령에 의거하여 후원자 권익보호에 최선을 다하고
+                            있습니다.
+                        </p>
+                        <p>
+                            <span>개인정보 수집 항목</span><br>
+                            - 인적사항 : 성명, 주소, 연락처, 휴대전화, 이메일 및 후원자정보에 명기된 항목<br>
+                            - 후원사항 : 후원금액, 후원방법 관련 항목<br>
+                        </p>
+                        <p>
+                            <span>개인정보 수집 및 이용 목적</span><br>
+                            귀하의 소중한 개인정보를 아래와 같은 목적으로 수집 및 이용합니다. <br>
+                            - 후원자·결연자 현황, 후원금(품) 수입·사용·지급현황 관리<br>
+                            - 후원자의 연말정산 소득공제 증빙을 위한 기부금 영수증 발행<br>
+                            - 사회복지법인 및 시설 후원내역조회를 위한 본인 확인절차<br>
+                            - 사회복지법인 및 시설 후원업무의 지방자치단체 관리·감독을 위한 정보제공<br>
+                            - 후원관련 우편물 및 휴대전화 문자메시지 발송<br>
+                            - 사회복지법인 재무·회계 규칙 제20조에 의거한 후원금 수입 및 사용결과 보고서 작성<br>
+                            - 후원자 연말정산 편의를 위한 국세청 연말정산간소화서비스로의 정보제공<br>
+                        </p>
+                        <p>
+                            <span>개인정보 보유 및 이용기간</span><br>
+                            상기 내용은 개인정보 보호법을 기준으로 합니다.<br>
+                            상기 개인정보의 이용목적이 소멸된 경우에도 후원자 지원 등 이용목적이 분명한 경우는 개인정보를 보유할 수 있음을 안내하여 드립니다.
+                        </p>
+                        <p>
+                            ※ 상기 내용은 본 기관에서 후원관련 업무와 후원자 지원을 실시하는데 필요한 최소한의 정보에 해당합니다.<br>
+                            ※ 상기 내용에 대하여 후원자는 동의하지 않을 수 있으나, 그 경우 원활한 지원이 어려울 수 있음을 알려드립니다.<br>
+                            ※ 아울러 본 동의서는 후원관련 업무 및 후원자 지원 목적외에는 사용하지 않을 것을 약속 드리며 철저히 비밀로 관리하여 타인에게 공개하거나 유출하지 않을 것임을
+                            알려드립니다.
+                        </p>
+                    </div>
+                    <label><input type="checkbox">개인정보수집에 동의합니다.</label>
+                </div>
+                <table>
+                    <caption>기본정보</caption>
+                    <colgroup></colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">이름</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">연락처</th>
+                            <td><input type="tel"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이메일</th>
+                            <td><input type="email"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <caption>나눔정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">후원방식</th>
+                            <td>
+                                <input id="
+                        regulary" type="radio" name="support-method" checked>
+
+                                <input id="
+                        irregulary" type="radio" name="support-method">
+
+                                <div class="btn">
+                                    <label for="regulary">정기</label>
+
+                                    <label for="irregulary">비정기</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">후원이름</th>
+                            <td>
+                                <label><input type="radio" name="support-name" checked>결원후원</label>
+                                <label><input type="radio" name="support-name">일반후원</label>
+                                <label><input type="radio" name="support-name">기업후원</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>후원금액</th>
+                            <td>
+                                <label><input type="radio" name="support-amount" checked>50,000원</label>
+                                <label><input type="radio" name="support-amount">30,000원</label>
+                                <label><input type="radio" name="support-amount">10,000원</label>
+                                <label><input type="radio" name="support-amount">기타<input type="text"
+                                        placeholder="직접입력"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">결제수단</th>
+                            <td>
+                                <label><input type="radio" name="support-means" checked>자동이체</label>
+                                <label><input type="radio" name="support-means">무통장입금</label>
+                                <label><input type="radio" name="support-means">직접접수</label>
+                            </td>
+                        </tr>
+                        <tr class="ect">
+                            <th>남길말</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>※ 본인은 달서구본리종합사회복지관의 후원회원이 되고자 합니다.<br>
+                    ※ 후원에 대한 궁금한 사항은 홈페이지 온라인상담 또는 1588-1940으로 연락주세요.
+                </p>
+                <div class="support-btn">
+                    <button>신청하기</button>
+                    <button>취소하기</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <p>
+                <a href="">복지관소개</a>
+                <a href="">개인정보처리방침</a>
+                <a href="">이메일무단수집거부</a>
+            </p>
+            <select name="" id="">
+                <option value="">관련 사이트</option>
+                <option value="">홀트아동복지회</option>
+                <option value="">관련 사이트</option>
+            </select>
+        </div>
+        <div class="footer-bottom">
+            <div class="bolli-info">
+                <a href="#home" class="footer-logo">
+                    <img src="./resorces/images/main/bolli_logo_02.png" alt="본리종합사회복지관">
+                </a>
+                <p>대구광역시 달서구 당산로 37-14 본리종합사회복지관<br>
+                    <strong>Tel</strong> 053-563-1007 <strong>Fax</strong> 053-563-2332 <strong>E-mail</strong>
+                    bolli1007@holt.or.kr<br>
+                    Copyright &copy; 2014 BOLLI COMMUNITY SERVICE CENTER. All rights reserved.
+                </p>
+            </div>
+            <div class="sns-site">
+                <a href="#none"><img src="./resorces/images/main/kakao.png" alt="kakao"></a>
+                <a href="#none"><img src="./resorces/images/main/blog.png" alt="blog"></a>
+                <a href="#none"><img src="./resorces/images/main/youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

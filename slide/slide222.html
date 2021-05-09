@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--제이쿼리먼저-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--slickslider-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <!--폰트-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <!--폰트어썸-->
+    <style>
+        body {
+            margin: 0;
+            width: 100vw;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-visual {
+            width: 100%;
+            height: 500px;
+            background-image: url('../resorces/images/main/back.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /*이전,이후 버튼*/
+        .slick-prev,
+        .slick-next {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: transparent;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            font-size: 0;
+        }
+
+        .slick-prev {
+            left: 120px;
+        }
+
+        .slick-next {
+            right: 120px;
+        }
+
+        /*슬라이드버튼*/
+        .slick-dots {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+        }
+
+        .slick-dots li button {
+            border: none;
+            font-size: 0;
+            width: 30px;
+            height: 7px;
+            margin-right: 5px;
+            background-color: lightblue;
+        }
+
+        .slick-dots li.slick-active button {
+            background-color: gray;
+        }
+
+        .visual-slide .slick-prev:before {
+            content: '\f060';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: black;
+            font-size: 0.8rem;
+        }
+
+        .visual-slide .slick-next:before {
+            content: '\f061';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: black;
+            font-size: 0.8rem;
+        }
+
+        /*슬라이드*/
+        .visual-slide {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        /*슬라이더*/
+        .visual-slider {}
+
+        .visual-slider .slider-wrap {
+            width: 80vw;
+            height: 500px;
+            /* border: 1px solid red; */
+            margin: 0 auto;
+            display: flex;
+            padding-top: 0px;
+            justify-content: space-around;
+            /* justify-content: center; */
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+
+        .visual-slider .slider-wrap .slider-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .visual-slider .slider-wrap .slider-text p {
+            margin-bottom: 60px;
+            font-size: 1.25rem;
+        }
+
+        .visual-slider .slider-wrap .slider-text h2 strong {}
+
+        .visual-slider .slider-wrap .slider-text a {
+            display: block;
+            width: 120px;
+            height: 28px;
+            border: 2px solid blue;
+            border-radius: 20px;
+            color: blue;
+            background-color: white;
+            text-align: center;
+            line-height: 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 300ms;
+        }
+
+        .slick-dots li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .slider-img {
+            position: relative;
+        }
+
+        /*파티용품대여*/
+        .party .slider-img a {
+            display: block;
+            width: 300px;
+            height: 200px;
+            border: 5px solid gray;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .party .slider-img img {
+            width: 130%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .party .slider-img .party-img2 {
+            width: 240px;
+            height: 165px;
+            position: absolute;
+            z-index: 4;
+            top: 100px;
+            left: -100px;
+        }
+
+        /*소개화면, 홀트패밀리*/
+        .love-in-action .slider-img a,
+        .holt-family .slider-img a,
+        .sharing-dishes .slider-img a,
+        .counseling .slider-img a {
+            display: block;
+            width: 400px;
+        }
+
+        .love-in-action .slider-img img,
+        .holt-family .slider-img a img,
+        .sharing-dishes .slider-img a img,
+        .counseling .slider-img a img {
+            width: 100%;
+        }
+
+
+        /*소개화면*/
+        .love-in-action .slider-text p,
+        .sharing-dishes .slider-text p {
+            width: 620px;
+        }
+
+        .love-in-action .slider-text p span {
+            display:inline-block;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+
+        }
+        .sharing-dishes .slider-text p span {
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="main-visual">
+        <div class="visual-slide">
+            <div class="visual-slider party">
+                <div class="slider-wrap">
+                    <div class="slider-text">
+                        <h2>
+                            사지마세요! party 용품<br>
+                            <strong>사!파리하우스 대여 안내</strong>
+                        </h2>
+                        <p>
+                            대여 일시 &#58; 매주 화, 금요일 14:00 - 17:00 (7일간 사용)<br>
+                            대여 방법 &#58; 복지관 내방 후 신청서 작성
+                        </p>
+                        <a href="">자세히보기 &#62;</a>
+                    </div>
+                    <div class="slider-img">
+                        <a class="party-img " href="#none">
+                            <img src="../resorces/images/main/party1.jpg" alt="">
+                        </a>
+                        <a class="party-img2" href="#none">
+                            <img src="../resorces/images/main/party2.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="visual-slider love-in-action">
+                <div class="slider-wrap">
+                    <div class="slider-text">
+                        <h2>
+                            Love In Action
+                            <br>
+                            <strong>사랑을 행동으로</strong>
+                        </h2>
+                        <p>
+                            <span>나눔과 배려, 그리고 이웃사랑이 넘치는 본리종합사회복지관</span><br>
+                            사회복지법인 홀트아동복지회의 역사와 전문성에 바탕을 두고<br>
+                            언제나 사랑의 마음으로 이웃과 세상을 바라보며
+                            주민의 행복한<br>삶에 기여하는 지역복지서비스를 제공하고자 합니다.
+                        </p>
+                        <a href="">자세히보기 &#62;</a>
+                    </div>
+                    <div class="slider-img">
+                        <a class="party-img1" href="#none">
+                            <img src="../resorces/images/main/loveinaction.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="visual-slider holt-family">
+                <div class="slider-wrap">
+                    <div class="slider-text">
+                        <h2>
+                            지역사회를 돌보는 착한나눔!<br>
+                            <strong>중소상공인 나눔실천 캠페인</strong>
+                        </h2>
+                        <p>
+                            뜻있는 기업이나 단체가 매월 일정금액을
+                            <br>
+                            도움이 필요한 가정에 후원하는 중소상공인 나눔실천 캠페인입니다.
+                        </p>
+                        <a href="">자세히보기 &#62;</a>
+                    </div>
+                    <div class="slider-img">
+                        <a class="party-img " href="#none">
+                            <img src="../resorces/images/main/홀트circle.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="visual-slider counseling">
+                <div class="slider-wrap">
+                    <div class="slider-text">
+                        <h2>
+                            &#34;건강한 마음지킴이
+                            &#34;
+                            <br>
+                            <strong>늘봄심리상담센터</strong>
+                        </h2>
+                        <p>
+                            심리 ·정서적 안정과 건강하고 행복한 삶을 응원하는<br>
+                            늘봄심리상담센터에서 영역별 전문상담사가<br>
+                            개인에게 맞는 상담·치료를 진행합니다.
+                        </p>
+                        <a href="">자세히보기 &#62;</a>
+                    </div>
+                    <div class="slider-img">
+                        <a class="party-img " href="#none">
+                            <img src="../resorces/images/main/늘봄심리상담센터.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="visual-slider sharing-dishes">
+                <div class="slider-wrap">
+                    <div class="slider-text">
+                        <h2>
+                            사랑을 배달해주실 분을 기다립니다<br>
+                            <strong>따뜻한 반찬나눔 서비스</strong>
+                        </h2>
+                        <p>
+                            식생활에 어려움을 겪는 분들의 가정에 따뜻한 밑반찬을 전달합니다.<br>
+                            활동일시 &#58; 주 1회(수 또는 금 14:00 - 16:00)<br>
+                            자격요건 &#58; 자차를 운행하여 배달 가능한 분<br>
+                            <span>
+                                &#42; 정기 후원, 물품/식재료 후원으로도 따뜻한 나눔에 동참 가능합니다
+                            </span>
+                        </p>
+                        <a href="">문의전화 &#62;</a>
+                    </div>
+                    <div class="slider-img">
+                        <a class="party-img " href="#none">
+                            <img src="../resorces/images/main/반찬봉사.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $('.visual-slide').slick({
+            // autoplay: true,
+            // autoplaySpeed: 2000,
+            pauseOnHover: true,
+            dots: true,
+        });
+    </script>
+</body>
+
+</html>

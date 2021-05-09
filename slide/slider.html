@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"></script><!--제이쿼리-->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><!--슬릭-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><!--슬릭-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+<!--폰트어썸-->
+    <title>Document</title>
+    <style>
+        .visual {
+            position: relative;
+        }
+        .visual button {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 50%;
+            font-size: 0;
+            color: transparent;
+        }
+        .visual button:before {
+            color: black;
+            font-size: 1rem;
+        }
+        .visual button.slick-prev {
+            left: 50px;
+            position: relative;
+        }
+        .visual button.slick-prev::before{
+            content:'\f060';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+        .visual button.slick-next {
+            right: 50px;
+        }
+
+        .visual button.slick-next::before{
+            content:'\f061';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+
+        .visual div {
+            width: 100%;
+        }
+        .visual div img {
+            width: 100%;
+        }
+        /*프로그래스바*/
+        .pro-bar{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:10px;
+    background: #ccc;
+}
+    .pro-ani{
+        animation: proBar 5s 1;
+      width:100%;
+    }
+
+    @keyframes proBar{
+    0%{width:0;}
+    100%{width:100%;}
+    }
+    </style>
+</head>
+<body>
+    <section class="visual">
+        <div>
+            <img src="./resorces/images/main/back-01.jpg" alt="">
+        </div>
+        <div>
+            <img src="./resorces/images/main/back-01.jpg" alt="">
+        </div>
+        <div>
+            <img src="./resorces/images/main/back-01.jpg" alt="">
+        </div>
+      
+    </section>
+    <button class="play">시작</button>
+    <button class="pause">정지</button>
+    <div class="pro-bar pro-ani"></div>
+    <script type="text/javascript">
+        
+        
+        $('.visual').slick({
+            autoplay: true,
+            autoplaySpeed: 2000, 
+            pauseOnHover:true
+        });
+
+        // 일시정지, 시작버튼
+        $('.play').on('click', function(){
+            $('.visual').slick('slickPlay');
+        })
+        $('.pause').on('click', function(){
+            $('.visual').slick('slickPause');
+            
+        })
+
+        // 프로그래스바
+        
+
+    </script>
+</body>
+</html>

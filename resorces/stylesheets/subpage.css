@@ -114,8 +114,17 @@ section.sub-content .sub-content-item p {
     font-size: 1.25rem;
 }
 
+/*복지관소개*/
+/* .intro-welfare-center article {
+    display: none;
+    pointer-events: none;
+}
+.intro-welfare-center article.on {
+    display: block;
+} */
+
 /*01인사말 내용*/
-section.intro-greeting .greeting-content .greeting-img{
+article.intro-greeting .greeting-content .greeting-img{
     width: inherit;
     height: 430px;
     overflow: hidden;
@@ -156,13 +165,13 @@ section.intro-greeting .greeting-content .greeting-img{
 }
 
 /*02법인소개 내용*/
-section.intro-corporation .corporation-content .corporation-img-wrap {
+article.intro-corporation .corporation-content .corporation-img-wrap {
     width: inherit;
     display: flex;
     height: 320px;
     margin-bottom: 40px;
 }
-section.intro-corporation .corporation-content .corporation-img-wrap .corporation-img{
+article.intro-corporation .corporation-content .corporation-img-wrap .corporation-img{
     width: 100%;
     height: 100%;
     background-color: rebeccapurple;
@@ -171,7 +180,7 @@ section.intro-corporation .corporation-content .corporation-img-wrap .corporatio
     position: relative;
     margin-bottom: 40px;
 }
-section.intro-corporation .corporation-content .corporation-img-wrap .corporation-img:first-child {
+article.intro-corporation .corporation-content .corporation-img-wrap .corporation-img:first-child {
     margin-right: 30px;
     box-sizing: border-box;
 }
@@ -385,7 +394,7 @@ section.intro-corporation .corporation-content .corporation-img-wrap .corporatio
     text-align: right;
 }
 
-section.sub-content .sub-content-item .purpose-container .purpose-list-item p{
+article.sub-content .sub-content-item .purpose-container .purpose-list-item p{
     font-size: 1.5rem;
     position: absolute;
     top: 50%;
@@ -772,8 +781,8 @@ input[id=committee]:checked ~ .staff-btn label[for=committee]{
 }
 
 
-/*사례관리기능*/
-section.sub-content .sub-content-item.case-management-content > p {
+/*사업소개-사례관리기능*/
+article.sub-content .sub-content-item.case-management-content > p {
     text-align: center;
     margin-bottom: 40px;
     font-size: 1.5rem;
@@ -810,7 +819,7 @@ section.sub-content .sub-content-item.case-management-content > p {
     background-color: var(--color-main);
     margin-right: 10px;
 }
-section.sub-content .sub-content-item.case-management-content .procedure > p {
+article.sub-content .sub-content-item.case-management-content .procedure > p {
     font-size: 1.5rem;
     color: var(--color-gray);
     margin-bottom: 20px;
@@ -868,7 +877,7 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
    width: 100%;;
 }
 
-/*후원신청*/
+/*후원-후원신청*/
 .support-application {
     background-color: var(--color-lightgray);
     box-sizing: border-box;
@@ -984,3 +993,149 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
     height: 30px;
     background-color: var(--color-blue);
 }
+
+/*캠페인- 나눔이 필요한 이웃*/
+
+
+
+/*본리소식-현장이야기*/
+/*메인페이지에 같은 class가 있기 때문에 .bolli-news를 추가해주어야한다!!!!*/
+
+.bolli-news .activity-wrap {
+    width: 100%;
+}
+.bolli-news .activity-wrap .details {
+    margin-bottom: 15px;
+}
+.bolli-news .activity-wrap .details select {
+    border: 1px solid var(--color-gray);
+    padding: 4px;
+    box-sizing: border-box;
+}
+/*시작*/
+.bolli-news .activity-wrap .activity-content{
+    display: flex;
+    flex-flow: row wrap;
+    /* align-content: center; */
+}
+.bolli-news .activity-wrap .activity-content > .activity-list {
+
+    flex: 0 1 33.33333%;
+
+    margin-bottom: 20px;
+    
+}
+.bolli-news .activity-wrap .activity-content > .activity-list > a {
+    width: 380px;
+    border: 1px solid var(--color-gray);
+}
+.bolli-news .activity-wrap .activity-content > .activity-list .activity-text p{
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.bolli-news .activity-wrap .activity-content > .activity-list .activity-text  .activity-date {
+    color: var(--color-gray);
+    font-size: 1rem;
+}
+
+
+
+
+/*페이징*/
+.paging {
+    margin-bottom: 30px;
+}
+.paging ol {
+    display: flex;
+    justify-content: center;
+}
+
+.paging a {
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+.paging .next a:before {
+    content: '\f105';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: black;
+    font-size: 0.8rem;
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+.paging .prev a:before {
+    content: '\f104';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: black;
+    font-size: 0.8rem;
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+.paging .first a:before {
+    content: '\f100';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: black;
+    font-size: 0.8rem;
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+.paging .last a:before {
+    content: '\f101';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: black;
+    font-size: 0.8rem;
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+}
+.paging li a.on {
+    background-color: var(--color-main);
+    color: white;
+}
+.paging li a:hover,
+.paging li a:hover:before {
+    background-color: var(--color-main);
+    color: white;
+}
+.search {
+    text-align: center;
+    border-top: 1px solid var(--color-gray);
+    padding: 20px 0;
+    font-size: 0;
+}
+.search * {
+    margin: 0 5px;
+    height: 44px;
+    border: 1px solid var(--color-gray);
+}
+.search select {
+    width: 147px;
+}
+.search input {
+    width: 260px;
+
+}
+.search button {
+    width: 150px;
+    background-color: var(--color-lightgray);
+}
+
