@@ -3,7 +3,6 @@ section:not(.main-visual, .sub-visual) {
 }
 
 /*01메인 비주얼*/
-
 .main-visual {
     width: 100%;
     background-image: url('/resorces/images/main/back.png');
@@ -120,7 +119,6 @@ section:not(.main-visual, .sub-visual) {
 
 /*파티용품대여*/
 .party .slider-img{
-    /* width: 400px; */
     position: relative;
 }
 
@@ -166,7 +164,7 @@ section:not(.main-visual, .sub-visual) {
 }
 
 .love-in-action .slider-text p span {
-    display:inline-block;
+    display: inline-block;
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 10px;
@@ -178,7 +176,7 @@ section:not(.main-visual, .sub-visual) {
 }
 .sharing-dishes .slider-text > span {
     display: inline-block;
-    padding:3px 17px;
+    padding: 3px 17px;
     border: 2px solid var(--color-main);
     border-radius: 20px;
     color: var(--color-main);
@@ -205,11 +203,11 @@ section:not(.main-visual, .sub-visual) {
 }
 .main-news > article.service .service-item {
     flex: 1;
-    border-right : 1px solid var(--color-gray);
+    border-right: 1px solid var(--color-gray);
     padding: 20px 40px;
     box-sizing: border-box;
     transition: 300ms;
-    display : flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -222,12 +220,11 @@ section:not(.main-visual, .sub-visual) {
 .main-news > article.service .service-item.service-holt:hover{
     background-color: var(--color-lightgray);
 }
-
 .main-news > article.service .service-item:hover .service-image{
     transform: scale(1.05);
 }
 
-.main-news > article.service > div:last-child {
+.main-news > article.service > .service-holt {
     border: none;
 }
 
@@ -335,10 +332,10 @@ section:not(.main-visual, .sub-visual) {
 .edu-program a:hover:before {
     width: calc( 480px - 20px);
 }
-.edu-program a:hover:after{
+.edu-program a:hover:after {
     height: calc( 265px - 20px);
 }
-.edu-program a h3{
+.edu-program a h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 5px;
@@ -371,16 +368,14 @@ section:not(.main-visual, .sub-visual) {
     color: var(--color-main);
     font-weight: 600;
 }
-.main-activity .activity-wrap .activity-wrap > .view-all {
+.main-activity .activity-wrap > .view-all {
     position: absolute;
     top: 15px;
     right: 0;
 }
-
 .main-activity .activity-wrap .activity-content {
     display: flex; 
 }
-
 .main-activity .activity-wrap .activity-content > .activity-list {
     width: 380px;
     height: 400px;
@@ -393,22 +388,21 @@ section:not(.main-visual, .sub-visual) {
 .activity-wrap .activity-content > .activity-list > a {
     display: block;
     position: relative;
-
-}/*지체장애인을 위한 영역표시*/
+}
 .activity-wrap .activity-content > .activity-list > a > .activity-img {
     overflow: hidden;
     width: 100%;
     height: 250px;
-    position:relative;
+    position: relative;
 }
-.activity-img img{
+.activity-img img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 1s;
 }
-.activity-img img:hover{ 
+.activity-img img:hover { 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -454,12 +448,11 @@ section:not(.main-visual, .sub-visual) {
     font-size: 1rem;
 }
 
-
 /*04나눔이 필요한 이웃*/
 .main-support {
     width: 100%;
 }
-.main-support article{
+.main-support article {
     margin: 0 auto;
     display: flex;
     width: 1200px;
@@ -470,7 +463,7 @@ section:not(.main-visual, .sub-visual) {
 .main-support > h2 {
     margin-bottom: 70px;
 }
-.main-support > h2 p{
+.main-support > h2 p {
     font-size: 2rem;
     text-align: center;
 }
@@ -540,18 +533,18 @@ section:not(.main-visual, .sub-visual) {
     overflow: hidden;
     position: relative;
 }
-.neighbor-content .neighbor-img img{
+.neighbor-content .neighbor-img img {
     width: 100%;
-    position:absolute;
-    top:50%;
-    left:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 .neighbor-content .neighbor-text {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    top:100%;
+    top: 100%;
     height: 180px;
     padding: 20px;
     box-sizing: border-box;
@@ -564,8 +557,8 @@ section:not(.main-visual, .sub-visual) {
     font-size: 1.75rem;
     margin-bottom: 20px;
 }
-.neighbor-text .in-progress{
-    color:black;
+.neighbor-text .in-progress {
+    color: black;
     background-color: white;
     margin-left: 10px;
     font-size: 0.9rem;
@@ -584,7 +577,7 @@ section:not(.main-visual, .sub-visual) {
     position: relative;
     margin-right: 30px;
 }
-.main-support .support-apply .apply-volunteer{
+.main-support .support-apply .apply-volunteer {
     width: 400px;
     height: 400px;
     background-color: rosybrown;
@@ -611,7 +604,7 @@ section:not(.main-visual, .sub-visual) {
 .apply-img:after {
     content: '';
     position: absolute;
-    top:0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.548);
@@ -620,7 +613,7 @@ section:not(.main-visual, .sub-visual) {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .apply-text h1 {
     font-size: 2.5rem;
@@ -645,20 +638,20 @@ section:not(.main-visual, .sub-visual) {
     color: black;
 }
 
-/*오시는길 문의사항*/
+/*06 오시는길 문의사항*/
 .main-guidance {
     background-image: url(../images/main/guidance.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: inherit;;
+    width: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 .main-guidance .guidance-wrap {
-    border:10px solid rgb(178, 214, 238);
+    border: 10px solid rgb(178, 214, 238);
     width: 1200px;
     height: 600px;
     background-color: white;
@@ -670,7 +663,7 @@ section:not(.main-visual, .sub-visual) {
     display: flex;
     justify-content: space-between;
 }
-.guidance-container > .guidance-content{
+.guidance-container > .guidance-content {
     width: 490px;
     height: 420px;
 }
@@ -697,23 +690,37 @@ section:not(.main-visual, .sub-visual) {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-lightblue);
+    transition: 300ms;
 }
-.map-text {
+.guidance-container > .guidance-content > a.map:hover {
+    background-color: var(--color-blue);
+}
+.guidance-container > .guidance-content > a.map:hover .map-img {
+    background-color: var(--color-main);
+}
+.guidance-container .map-text {
     margin-right: 50px;
     flex: 1;
 }
-.map-text h3,
-.questions h3
-{
+.guidance-container .map-text h3,
+.questions h3 {
     font-size: 1.5rem;
     margin-bottom: 5px;
     font-weight: 600;
 }
-.map-img {
-    width: 130px;
+.guidance-container .map-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 100px;
 }
-.map-img img {
-    width: 100%;
+.guidance-container > .guidance-content > a.map .map-img .fas {
+    color: white;
 }
 .questions {
     background-color: var(--color-lightorange);
@@ -737,7 +744,6 @@ ul.other-site {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 ul.other-site li {
     width: 230px;
@@ -757,7 +763,7 @@ ul.other-site li a img {
 ul.other-site li a span {
     display: block;
 }
-ul.other-site li a span:nth-child(2){
+ul.other-site li a span:nth-child(2) {
     font-size: 1.25rem;
     font-weight: 600;
 }
@@ -766,7 +772,7 @@ ul.other-site li:nth-child(2) {
     border-bottom: 1px solid var(--color-gray);
 }
 ul.other-site li:nth-child(1),
-ul.other-site li:nth-child(3){
+ul.other-site li:nth-child(3) {
     border-right: 1px solid var(--color-gray);
 }
 
@@ -809,22 +815,22 @@ ul.other-site li:nth-child(3){
     font-size: 0;
 }
 .partner-slider .slick-prev {
-    right:30px
+    right: 30px;
 }
 .partner-slider .slick-next {
-    right:0px
+    right: 0px;
 }
 .partner-slider .slick-prev:before {
     content:'\f060';
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color:black;
+    color: black;
     font-size: 0.7rem;
 }
 .partner-slider .slick-next:before {
     content:'\f061';
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color:black;
+    color: black;
     font-size: 0.8rem;
 }

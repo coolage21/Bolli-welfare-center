@@ -28,10 +28,11 @@
 .footer-bottom{
     display: flex;
     align-items: center;
-
     height: 130px;
+    border: 1px solid red;
 }
 .footer-bottom > div {
+    border:1px solid purple;
     display: flex;
     align-items: center;
 }

@@ -52,7 +52,7 @@ header > .submenu {
     width: 150px;
     line-height: 50px;
     text-align: center;
-    font-size: 1.25rem;/*---------폰트사이즈----------------*/
+    font-size: 1.25rem;
     font-weight: 600;
     position: relative;
 }
@@ -77,7 +77,7 @@ header > .submenu {
 .mainmenu > .mainmenu-wrap > nav > ul ul {
     background-color: white;
     width: 100vw;
-    height: 300px;
+    height: 350px;
     position: absolute;
     text-align: center;
     width: 150px;
@@ -92,16 +92,15 @@ header > .submenu {
     visibility: visible;
 }
 .mainmenu > .mainmenu-wrap > nav > ul ul li a {
-    padding:10px;
+    width: inherit;
+    height: 50px;
+    line-height: 50px;
     display: block;
     width: inherit;
-    height: inherit;
     transition: 200ms;
 }
 .mainmenu > .mainmenu-wrap > nav > ul ul li a:hover {
     display: block;
-    width: inherit;
-    height: inherit;
     background-color: var(--color-lightgray);
 }
 
@@ -116,7 +115,6 @@ header > .submenu {
 .open-button > .fa-bars {
     font-size: 1.25rem;
 }
-
 .allmenu-wrap {
     width: 100vw;
     height: 100vh;
@@ -124,19 +122,18 @@ header > .submenu {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity:0;
+    opacity: 0;
     transition: 300ms;
     position: fixed;
     top: 0;
     left: 0;
-    z-index:99999;
+    z-index: 99999;
     visibility: hidden;
 }
 .allmenu-wrap.visible {
     opacity: 1;
     visibility: visible;
 }
-
 .allmenu-container {
     width: 1000px;
     height: 500px;
@@ -145,19 +142,16 @@ header > .submenu {
     box-sizing: border-box;
     position: relative;
 }
-
 .allmenu-container h2 {
-    font-size: 1.75rem;/*---------폰트사이즈----------------*/
+    font-size: 1.75rem;
     margin-bottom: 10px;
 }
-
 .allmenu-container span {
     display: block;
     height: 2px;
     background-color: var(--color-main);
     margin-bottom: 30px;
 }
-
 .allmenu-container .close-button {
     width: 30px;
     height: 30px;
@@ -168,42 +162,36 @@ header > .submenu {
     position: absolute;
     top: 50px;
     right: 50px;
-    font-size: 1.25rem;/*---------폰트사이즈----------------*/
+    font-size: 1.25rem;
     color: var(--color-gray);
 }
-
 .allmenu-container .allmenu-item {
     display: flex;
     justify-content: space-between;
 }
-
 .allmenu-item > li > a {
     display: block;
     color: var(--color-main);
     font-weight: 800;
-    font-size: 1.1rem;/*---------폰트사이즈----------------*/
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
-
 .allmenu-item > li > ul > li > a {
-    font-size: 1rem;/*---------폰트사이즈----------------*/
+    font-size: 1rem;
     display: block;
     margin: 7px 0;
 }
-
-.allmenu-item>li>ul>li>a:before {
+.allmenu-item > li > ul > li > a:before {
     content: '·';
     color: var(--color-main);
     margin-right: 4px;
 }
-
 .allmenu-item > li > ul > li > ul > li > a {
-    color: var(--color-lightblue);
+    color: var(--color-blue);
     display: block;
-    font-size: 0.9rem;/*---------폰트사이즈----------------*/
+    font-size: 0.9rem;
 }
-
-.allmenu-item > li > ul > li > ul > li a::before {
+.allmenu-item > li > ul > li > ul > li a:before {
     content: '-';
     margin: 0 5px 0 10px;
 }

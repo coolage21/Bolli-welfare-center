@@ -1,9 +1,8 @@
 body{
-    margin:0;
-    font-family:'NanumSquare',san-serif;
-    font-size:17px;
-    line-height:1.5;
-    font-size: 1rem;
+    margin: 0;
+    font-family: 'NanumSquare',san-serif;
+    font-size: 17px;
+    line-height: 1.5;
     padding-top: 84px;
     }
 h1, h2, h3, h4, h5, h6, p {
@@ -57,9 +56,9 @@ button {
 }
 :root {
     /*color*/
-    --color-main: rgb(0, 100, 230);
-    --color-blue: rgb(100, 200, 255);
-    --color-lightblue: rgb(230, 250, 255);
+    --color-main: rgb(75, 99, 202);
+    --color-blue: rgb(100, 119, 219);
+    --color-lightblue: rgb(244, 246, 255);
     --color-black: rgb(0, 0, 0);
     --color-gray: rgb(143, 143, 143);
     --color-lightgray: rgb(236, 236, 236);
@@ -75,5 +74,4 @@ button {
     --subpage-title: 2rem; /*h2*/
     --subpage-subtitle: 1.75rem; /*h3*/
     --subpage-main-text: 1.25rem;
-
 }
