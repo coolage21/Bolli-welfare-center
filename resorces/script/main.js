@@ -5,7 +5,7 @@ $('.visual-slide').slick({
 });
 
 //main-partner section
-$('.partner-slider').slick({
+$('.holt-slider').slick({
     slidesToShow: 6,
     slidesToScroll: 6,
 });
