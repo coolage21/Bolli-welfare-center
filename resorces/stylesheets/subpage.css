@@ -1,13 +1,12 @@
-
-/*00-1서브비주얼*/
+/* 00-1 Sub visual */
 .sub-visual {
   position: relative;
   color: white;
-  border-bottom: 4px solid var(--color-blue);
+  height: 400px;
 }
 .sub-visual .sub-visual-img{
   width: 100%;
-  height: 400px;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -42,19 +41,20 @@
   margin-bottom: 10px;
 }
 .sub-visual .sub-visual-title h2 {
-  font-size: 2rem;
+  font-size: 30px;
 }
 
-/*00-2메뉴*/
+/* 00-2 menu */
 nav.intro-tab {
-  position: relative;
-  top: -63px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 nav.intro-tab ul {
   display: flex;
-  margin: 0 auto;
+  margin: auto;
   width: 1200px;
-  height: 60px;
+  height: 40px;
 }
 nav.intro-tab ul li {
   flex: 1;
@@ -66,54 +66,53 @@ nav.intro-tab ul li a {
   background-color: rgba(20, 20, 66, 0.56);
   color: white;
   display: block;
-  height: 58px;
-  line-height: 58px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   border: 1px solid gray;
   border-right: none;
   border-bottom: none;
 }
 nav.intro-tab ul li a.on {
-  border: 4px solid var(--color-blue);
-  border-bottom: 1px solid white;
-  line-height: 58px;
+  height: 43px;
+  font-size: 18px;
+  border: 1px solid white;
   background-color: white;
   color: black;
   font-weight: 600;
-  font-size: 1.25rem;
 }
 
-/*section*/
+/* 00-3 subpage-section */
 section.sub-content {
-  width: 1200px;
+  width: 1170px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
-/*00-3 페이지 순서*/
+/* 00-4 section page */
 .page-top {
-  font-size: 0.8rem;
+  font-size: 14px;
   color: var(--color-gray);
   text-align: right;
   margin-bottom: 20px;
 }
-/*00-4 타이틀*/
+/* 00-5 section title */
 section.sub-content .sub-content-title {
   text-align: center; 
   margin-bottom: 80px; 
 }
 section.sub-content .sub-content-title h2 {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 30px;
   padding-bottom: 5px;
   border-bottom: 4px solid var(--color-blue)
 }
-/*00-5 본문내용*/
+/* 00-6 section desc */
 section.sub-content .sub-content-item p {
-  font-size: 1.25rem;
+  font-size: 18px;
 }
 
-/*01인사말*/
+/* 01 greeting */
 section.intro-greeting .greeting-content .greeting-img {
   width: inherit;
   height: 40vh;
@@ -133,11 +132,38 @@ section.intro-greeting .greeting-content .greeting-img {
   top: 50%;
   transform: translateY(-50%);
   left: 10%;
-  font-size: 1.75rem;
+  font-size: 28px;
   color: white;
+  font-style: italic;
+  font-weight: normal;
+}
+.greeting-img h3::before,
+.greeting-img h3::after {
+  font-family: 'Font Awesome 5 Free'; 
+  width: 20px;
+  font-weight: bold;
+  position: absolute;
+  z-index: -2;
+  opacity: .3;
+  bottom: 0;
+}
+
+.greeting-img h3::before {
+  content: '\f10d';
+  top: -20px;
+  left: -10px;
+}
+.greeting-img h3::after {
+  content: '\f10e';
+  right: 60px;
+  bottom: -10px;
+}
+
+.greeting-text {
+  padding: 0 80px;
+  margin: auto;
 }
 .greeting-text p{
-  font-size: 1.25rem;
   margin-bottom: 30px;
 }
 .greeting-text .greeting-name {
@@ -145,54 +171,163 @@ section.intro-greeting .greeting-content .greeting-img {
 }
 .greeting-text .greeting-name span:nth-child(1) {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 14px;
 }
 .greeting-text .greeting-name span:nth-child(2) {
-  font-size: 1.5rem;
+  font-size: 28px;
+  font-family: 'Song Myung', serif;
 }
 
-/*02법인소개*/
-section.intro-corporation .corporation-content .corporation-img-wrap {
-  width: inherit;
-  display: flex;
-  height: 320px;
-  margin-bottom: 40px;
-}
-section.intro-corporation .corporation-content .corporation-img-wrap .corporation-img {
-  width: 100%;
-  height: 100%;
-  background-color: rebeccapurple;
-  flex: 1;
-  overflow: hidden;
+/* 02 purpose */
+/* purpose-title */
+.purpose-title {
+  text-align: center;
   position: relative;
+  top: 50%;
+}
+.purpose-title h3 {
+  color: var(--color-main);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.purpose-title p {
   margin-bottom: 40px;
+  font-size: 20px;
 }
-section.intro-corporation .corporation-content .corporation-img-wrap .corporation-img:first-child {
-  margin-right: 30px;
-  box-sizing: border-box;
-}
-.corporation-img img {
-  position: absolute;
+.purpose-content {
   width: 100%;
 }
-.corporation-introduce {
-  margin-bottom: 80px;
+
+/* purpose-desc */
+.purpose-desc {
+  position: relative;
+  width: 100%;
 }
-.corporation-text> .corporation-mission,
-.corporation-text> .corporation-value {
-  display: flex;    
+.purpose-name {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: white;
+  border: 5px solid var(--color-silver);
+  box-shadow: 3px 3px 4px rgba(114, 114, 114, 0.5);
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+}
+.purpose-desc .purpose-name .fas {
+  margin-bottom: 10px;
+  color: var(--color-gray);
+  font-size: 2rem;
+}
+.purpose-desc .purpose-name h5 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+.purpose-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.purpose-list {
+  width: 570px;
+  height: 180px;
+  border: 1px solid var(--color-gray);
+  padding: 50px 80px;
+  position: relative;
+}
+.purpose-lists .list1,
+.purpose-lists .list4 {
+  background-color: var(--color-lightmain)
+}
+.purpose-lists .list2,
+.purpose-lists .list3 {
+  background-color: var(--color-lightgray)
+}
+.purpose-lists .list1,
+.purpose-lists .list2 {
+  margin-bottom: 20px;
+}
+.purpose-list span {
+  position: absolute;
+  display: inline-block;
+  padding: 7px;
+  background-color: white;
+  font-weight: 600;
+  top: 0;
+}
+.list1 span, .list3 span {
+  left: 0;
+}
+.list2 span, .list4 span {
+  right: 0;
+}
+.purpose-list > div {
+  display: flex;
   align-items: center;
 }
-.corporation-text > .corporation-mission {
-  margin-bottom: 30px;
+.purpose-list > div img {
+  width: 80px;
+  margin-right: 25px;
 }
-.corporation-mission h4, 
-.corporation-value h4 {
+.purpose-desc .purpose-lists .purpose-list > p {
+  font-size: 20px;
+}
+.purpose-list p strong {
+  font-size: 24px;
+}
+
+/* 03 corporation */
+.corporation-intro {
+  margin-bottom: 100px;
+  display: flex;
+}
+.corporation-text strong {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.corporation-text p {
+  margin-bottom: 20px;
+}
+.corporation-img {
+  width: 280px;
+  margin-right: 40px;
+}
+.corporation-img img{
+  width: inherit;
+}
+
+/* holt-intro */
+.holt-intro {
+  display: flex;
+  align-items: flex-start;
+}
+.holt-mission,
+.holt-value {
+  flex: 1;
+  display: flex;    
+  align-items: flex-start;
+
+}
+.holt-mission {
+  margin-right: 30px;
+}
+.holt-mission h4, 
+.holt-value h4 {
   color: white;
   background-color: var(--color-blue);
   font-size: 1.5rem;
   font-weight: 600;
-  margin-right: 60px;
+  margin-right: 30px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -207,12 +342,12 @@ section.intro-corporation .corporation-content .corporation-img-wrap .corporatio
   align-items: center;
   line-height: 30px;
 }
-.corporation-mission h4 strong, 
-.corporation-value h4 strong {
+.holt-mission h4 strong, 
+.holt-value h4 strong {
   color: yellow;
 }
-.corporation-mission h4:before, 
-.corporation-value h4:before {
+.holt-mission h4:before, 
+.holt-value h4:before {
   position: absolute;
   content: '';
   width: 160px;
@@ -222,17 +357,17 @@ section.intro-corporation .corporation-content .corporation-img-wrap .corporatio
   border: 1px solid var(--color-blue);
   z-index: -1;
 }
-.corporation-mission h4:before {
+.holt-mission h4:before {
   border: 1px solid var(--color-blue);
 }
-.corporation-value h4:before {
+.holt-value h4:before {
   border: 1px solid var(--color-blue);
 }
-.corporation-mission h4:after, 
-.corporation-value h4:after {
+.holt-mission h4:after, 
+.holt-value h4:after {
   content: '';
   width: 100px;
-  height: 2px;
+  height: 1px;
   background-color: black;
   position: absolute;
   left: 100%;
@@ -240,147 +375,54 @@ section.intro-corporation .corporation-content .corporation-img-wrap .corporatio
   transform: translateY(-50%);
   z-index: -2;
 }
-.corporation-mission h4:after {
+.holt-mission h4:after {
   background-color: var(--color-blue);
 }
-.corporation-value h4:after {
-  background-color: rgb(72, 183, 173);
+.holt-value h4:after {
+  background-color: var(--color-main);
 }
-.corporation-value h4 {
-  background-color: rgb(72, 183, 173);
+.holt-value h4 {
+  background-color: var(--color-main);
 }
-.corporation-mission p,
-.corporation-value p {
+.holt-mission p,
+.holt-value p {
+  height: 250px;
   flex: 1;
   padding: 20px;
-} 
-.corporation-mission p {
-  background-color: var(--color-lightblue);
-}
-.corporation-value p {
-  background-color: rgb(235, 253, 251);
-}
-.corporation-mission h4,
-.corporation-value h4,
-.corporation-mission p,
-.corporation-value p,
-.corporation-mission h4:before,
-.corporation-value h4:before {
-  box-shadow: 3px 3px 4px rgba(114, 114, 114, 0.5);
-}
-
-/*03운영목적*/
-.purpose-text {
-  text-align: center;
-  position: relative;
-  top: 50%;
-}
-.purpose-text h3 {
-  color: var(--color-main);
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-.purpose-text p {
-  margin-bottom: 40px;
-}
-.purpose-content {
-  width: 100%;
-}
-.purpose-container {
-  position: relative;
-  width: 100%;
-}
-.purpose-container .purpose-name {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  border: 1px solid var(--color-blue);
   background-color: white;
-  border:10px solid rgb(204, 204, 204);
-  box-shadow: 3px 3px 4px rgba(114, 114, 114, 0.5);
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-}
-.purpose-container .purpose-name .fas {
-  margin-bottom: 10px;
-  color: var(--color-gray);
-  font-size: 2rem;
-}
-.purpose-container .purpose-name h5 {
-  font-size: 1.25rem;
-  font-weight: 800;
-}
-.purpose-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.purpose-list-item {
-  width: 590px;
-  height: 200px;
-  box-shadow: 3px 3px 4px rgba(114, 114, 114, 0.5);
-}
-.purpose-list .list1 {
-  background-color: var(--color-lightblue);
-}
-.purpose-list .list2 {
-  background-color: rgb(205, 236, 243);
-}
-.purpose-list .list1,
-.purpose-list .list2 {
-  margin-bottom: 20px;
-}
-.purpose-list .list3 {
-  background-color: var(--color-lightgray);
-}
-.purpose-list .list4 {
-  background-color: var(--color-lightorange);
-}
-.purpose-list-item span {
-  display: inline-block;
-  padding: 7px;
-  background-color: rgb(200, 215, 250);
-  font-weight: 600;
-}
-.purpose-list-item {
-  position: relative;
-}
-.list2 span, .list4 span {
-  position: absolute;
-  right: 0;
-}
-.list1 p, .list3 p {
-  padding-left: 60px;
-}
-.list2, .list4 {
-  display: flex;
-  justify-content: flex-end;
-}
-.list2 p, .list4 p {
-  padding-right: 60px;
-  text-align: right;
-}
-section.sub-content .sub-content-item .purpose-container .purpose-list-item p {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.purpose-list-item p strong {
-  font-size: 1.75rem;
+} 
+.holt-value p {
+  border-color: var(--color-main);
 }
 
-/*04 연혁*/
+/* 04 overview */
+.overview-content table {
+  width: 750px;
+  margin: auto;
+  border-collapse: collapse;
+  border-top : 3px solid var(--color-main);
+}
+.overview-content table tr th,
+.overview-content table tr td {
+  border: 1px solid var(--color-silver);
+  padding: 7px 20px;
+  box-sizing: border-box;
+}
+.overview-content table tr th {
+  background-color: rgb(248, 248, 248);
+  color: var(--color-main);
+}
+.overview-content table caption {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  margin: 100px 0 20px 0;
+}
+
+/* 05 history */
 .history-container > div {
-  width: 600px;
+  width: 585px;
   box-sizing: border-box;
   position: relative
 }
@@ -416,7 +458,7 @@ section.sub-content .sub-content-item .purpose-container .purpose-list-item p {
   background-color: var(--color-gray);
 }  
 .history-container > div > h2 {
-  font-size: 1.75rem;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
   position: relative;
@@ -458,31 +500,7 @@ section.sub-content .sub-content-item .purpose-container .purpose-list-item p {
   color: var(--color-gray);
 }
 
-/*05 기관현황*/
-.overview-content table {
-  width: 100%;
-  border-collapse: collapse;
-  border-top : 3px solid var(--color-main);
-  font-size: 1.25rem;
-}
-.overview-content table tr th,
-.overview-content table tr td {
-  border: 1px solid gray;
-  padding: 7px 20px;
-  box-sizing: border-box;
-}
-.overview-content table tr th {
-  background-color: rgb(248, 248, 248);
-  color: var(--color-main);
-}
-.overview-content table caption {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: left;
-  margin: 100px 0 20px 0;
-}
-
-/*06 함께하는 사람들*/
+/* 06 함께하는 사람들 */
 .staff-container input {
   display: none;
 }
@@ -497,22 +515,22 @@ input[id=committee]:checked ~ .slide3 {
 input[id=chart]:checked ~ .staff-btn label[for=chart],
 input[id=division]:checked ~ .staff-btn label[for=division],
 input[id=committee]:checked ~ .staff-btn label[for=committee] {
-  background-color: var(--color-lightblue);
+  background-color: var(--color-lightmain);
   font-weight: 600;
   color: black;
 }
 .staff-btn {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 .staff-btn label {
   display: inline-block;
-  width: 20%;
-  height: 44px;
-  line-height: 44px;
+  width: 160px;
+  height: 34px;
+  line-height: 34px;
   text-align: center;
-  font-size: 1.5rem;
-  border: 1px solid var(--color-blue);
+  font-size: 20px;
+  border: 1px solid var(--color-main);
   margin-right: 20px;
   color: var(--color-gray);
   cursor: pointer;
@@ -520,13 +538,15 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
 .staff-btn label:last-child {
   margin-right: none;
 }
-/*06-1 조직도*/
+
+/* 06-1 조직도 */
 .staff-content.slide1 {
   width: 100%;
   height: 1000px;
   position: relative;
+  font-size: 18px;
 }
-/*조직도 선*/
+/* 조직도 선 */
 .slide1 > div {
   text-align: center;
 }
@@ -534,7 +554,8 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   position: relative;
   top: 30px;
 }
-/*관장, 부장, 과장*/
+
+/* 관장, 부장, 과장 */
 .slide1 p {
   width: 300px;
   height: 60px;
@@ -570,7 +591,8 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
 .slide1 .manager2 {
   right: 100px;
 }
-/*위원회*/
+
+/* 위원회 */
 .slide1 > ul > li > ul.committee {
   position: absolute;
   top: 5px;
@@ -580,15 +602,15 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   display: block;
   width: 230px;
   height: 50px;
-  background-color: var(--color-lightblue);
+  background-color: var(--color-lightmain);
   border: 1px solid var(--color-gray);
   margin-bottom: 3px;
   color: black;
   text-align: center;
   line-height: 52px;
-  font-size: 1.25rem;
 } 
-/*기획총무팀, 사회복지팀, 사례관리팀*/
+
+/* 기획총무팀, 사회복지팀, 사례관리팀 */
 .slide1 table {
   position: absolute;
   top: 410px;
@@ -596,7 +618,6 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   height: 300px;
   border-collapse: collapse;
   background-color: white;
-  font-size: 1.25rem;
 }
 .slide1 table th,
 .slide1 table td {
@@ -634,20 +655,19 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   display: block;
 }
 
-/*06-2 업무분장*/
-/*06-3 운영위원회*/
+/* 06-2 업무분장 */
+/* 06-3 운영위원회 */
 .staff-content.slide2 table,
 .staff-content.slide3 table {
   width: 100%;
   border-collapse: collapse;
   border-top : 3px solid var(--color-main);
-  font-size: 1.25rem;
 }
 .staff-content.slide2 table tr th,
 .staff-content.slide2 table tr td,
 .staff-content.slide3 table tr th,
 .staff-content.slide3 table tr td {
-  border:1px solid gray;
+  border: 1px solid gray;
   padding: 7px 0;
   box-sizing: border-box;
 }
@@ -666,46 +686,43 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   text-align: center;
 }
 
-/*07 찾아오시는길*/
-.map-content .map-img {
+/* 07 찾아오시는길 */
+.map-img {
   width: 100%;
   height: 500px;
   background-color: var(--color-lightgray);
   margin-bottom: 20px;
 }
-.map-content .map-text{
+.map-text{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-size: 1.25rem;
+ 
 }
-.map-content .map-text > div {
+.map-text > div {
   display: flex;
-  width: 390px;
+  width: 380px;
   flex-direction: column;
   padding: 20px;
   box-sizing: border-box;
+  border: 1px solid var(--color-gray);
+  border-radius: 7px;
 }
-.map-content .map-text > div.address {
-  background-color: var(--color-lightgray);
+.map-text h3 {
+  font-size: 20px;
+  font-weight: 900;
 }
-.map-content .map-text > div.bus {
-  background-color: var(--color-lightblue);
+.map-text > div strong {
+  display: block;
+  font-size: 20px;
 }
-.map-content .map-text > div.subway {
-  background-color: var(--color-lightorange);
-}
-.map-content .map-text > div h4 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.map-content .map-text > div > p {
+.map-text > div > p {
   margin-bottom: 10px;
 }
-.map-content .map-text > div .fas {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 30px;
+.map-text .fas {
+  font-size: 30px;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 .fa-map-marked-alt {
   color: var(--color-gray);
@@ -718,11 +735,11 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
 }
 
 
-/*08사업소개-사례관리기능*/
+/* 08사업소개-사례관리기능 */
 section.sub-content .sub-content-item.case-management-content > p {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 .case-management-img {
   display: flex;
@@ -741,14 +758,26 @@ section.sub-content .sub-content-item.case-management-content > p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.procedure {
-  text-align: center;
+/* procedure */
+.management-procedure,
+.welephone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.procedure > h3 {
+.procedure,
+.welephone-content{
+  text-align: center;
+  width: 570px;
+}
+
+.procedure > h3,
+.management-welephone > h3 {
   font-size: 1.75rem;
   margin-bottom: 20px;
 }
-.procedure > h3 > span {
+.procedure > h3 > span,
+.management-welephone > h3 > span {
   display: inline-block;
   font-size: 1.5rem;
   padding: 0 5px;
@@ -756,15 +785,21 @@ section.sub-content .sub-content-item.case-management-content > p {
   background-color: var(--color-main);
   margin-right: 10px;
 }
-section.sub-content .sub-content-item.case-management-content .procedure > p {
-  font-size: 1.5rem;
+.management-welephone > h3 > span {
+  background-color: var(--color-orange);
+}
+.procedure > p {
   color: var(--color-gray);
   margin-bottom: 20px;
+  height: 40px;
 }
-.procedure > div {
+
+.procedure > div,
+.welephone > div {
   margin-bottom: 80px;
 }
-.procedure > div > p.question {
+.procedure > div > p.question,
+.welephone div .question {
   width: 100%;
   border: 2px solid blue;
   color: blue;
@@ -772,20 +807,27 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
   padding: 5px 0;
   box-sizing: border-box;
 }
-.procedure > div > p.answer {
-  width: 100%;
-  padding: 15px;
-  background-color: var(--color-lightgray);
-  box-sizing: border-box;
-  text-align: left;
-}
-.procedure.welephone > h3 > span {
-  background-color: var(--color-orange);
-}
-.procedure.welephone > div > p.question {
+.welephone-content p.question {
   border: 2px solid var(--color-orange);
   color: var(--color-orange);
 }
+.procedure > div > p.answer,
+.welephone > div > p.answer {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  background-color: var(--color-lightmain);
+  box-sizing: border-box;
+  text-align: left;
+}
+.welephone > div > p.answer {
+  background-color: var(--color-lightgray);
+  height: 300PX;
+}
+
+
+
+/* flowchart */
 .case-management-flowchart {
   text-align: center;
 }
@@ -807,24 +849,27 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
   width: inherit;
 }
 .case-management-flowchart > div img {
-  width: 100%;;
+  width: 70%;
 }
 
-/*09 후원-후원신청*/
+/* 09 후원-후원신청 */
 .support-application {
-  background-color: var(--color-lightgray);
+  background-color: var(--color-lightmain);
   box-sizing: border-box;
   padding: 80px 150px;
-  /* text-align: center; */
 }
 .support-application h3 {
-  font-size: 1.75rem;
+  font-size: 24px;
   margin-bottom: 60px;
   text-align: center;
 }
 .support-application .privacy-policy {
   margin-bottom: 30px;
   text-align: center;
+}
+.support-application .privacy-policy label {
+  font-size: 18px;
+  cursor: pointer;
 }
 .support-application .privacy-policy > div {
   margin: 0 auto;
@@ -838,7 +883,6 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
   margin-bottom: 30px;
 }
 .support-application .privacy-policy > div p {
-  font-size: 1rem;
   margin-bottom: 10px;
 }
 .support-application .privacy-policy > div span {
@@ -850,15 +894,16 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
 }
 .support-application table caption {
   display: inline-block;
-  font-size: 1.5rem;
-  border-bottom: 4px solid var(--color-blue);
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-main);
   margin-bottom: 20px;
 }
 .support-application table tbody {
   background-color: white;
 }
 .support-application table tr {
-  font-size: 1.25rem;
+  font-size: 18px;
 }
 .support-application table th,
 .support-application table td {
@@ -867,9 +912,9 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
   background-color: white;
 }
 .support-application table th {
-  width: 100px;
+  width: 150px;
   color: var(--color-main);
-  background-color: var(--color-lightblue);
+  background-color: var(--color-lightmain);
 }
 .support-application table td {
   width: 800px;
@@ -895,7 +940,7 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
   border: none;
   padding: 10px 40px;
   color: white;
-  font-size: 1.25rem;
+  font-size: 18px;
 }
 .support-application .support-btn button:nth-child(1) {
   margin-right: 10px;
@@ -910,9 +955,9 @@ section.sub-content .sub-content-item.case-management-content .procedure > p {
 }
 label[for=regulary], label[for=irregulary], label[for=name1], label[for=name2], label[for=name3], label[for=amount1], label[for=amount2], label[for=amount3], label[for=means1], label[for=means2], label[for=means3] {
     display: inline-block;
-    padding: 4px 30px;
+    padding: 2px 30px;
     height: 30px;
-  border: 1px solid black;
+  border: 1px solid var(--color-gray);
   cursor: pointer;
   text-align: center;
 }
@@ -933,45 +978,105 @@ label[for=regulary], label[for=irregulary], label[for=name1], label[for=name2], 
   border: 1px solid var(--color-main)
 }
 
-/*10 캠페인- 나눔이 필요한 이웃*/
-/*11 본리소식-현장이야기*/
-/*참고-메인페이지에 같은 class가 있기 때문에 .bolli-news를 추가해주어야한다!!!!*/
-.bolli-news .activity-wrap {
+/* 10 캠페인- 나눔이 필요한 이웃 */
+.neighbor-container .details {
+  margin-bottom: 35px;
+}
+.neighbor-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+thead th  {
+  border-top: 2px solid var(--color-main);
+  border-bottom: 1px solid var(--color-main);
+  padding: 6px 0;
+}
+tbody td.table-subject {
+  text-align: left;
+  padding-left: 10px;
+}
+tbody td {
+  border-bottom: 1px solid var(--color-silver);
+  padding: 10px 0;
+}
+tbody td a {
+  transition: .2s;
+}
+tbody td a:hover {
+  color: var(--color-main);
+}
+
+/* 11 본리소식-현장이야기 */
+.bolli-news .activity-container {
   width: 100%;
 }
-.bolli-news .activity-wrap .details {
-  margin-bottom: 25px;
+.activity-container .details {
+  margin-bottom: 35px;
 }
-.bolli-news .activity-wrap .details select {
-  border: 1px solid var(--color-gray);
+.activity-container .details select {
   padding: 4px;
-  box-sizing: border-box;
-  font-size: 1.1rem;
+  font-size: 18px;
 }
-
-.bolli-news .activity-wrap .activity-content{
+.activity-content{
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.bolli-news .activity-wrap .activity-content > .activity-list {
-  flex: 0 1 33.33333%;
-  margin-bottom: 20px;
+.activity-list {
+  width: 370px;
+  margin-bottom: 40px;
+  position: relative;
+  border: 1px solid var(--color-silver);
 }
-.bolli-news .activity-wrap .activity-content > .activity-list > a {
-  width: 380px;
-  border: 1px solid var(--color-gray);
+.activity-list > a {
+  width: 100%;
 }
-.bolli-news .activity-wrap .activity-content > .activity-list .activity-text p {
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
+.activity-list > a em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3px 5px;
+  background-color: white;
+  font-size: 13px;
+  font-weight: bold;
 }
-.bolli-news .activity-wrap .activity-content > .activity-list .activity-text  .activity-date {
+.activity-text {
+  padding: 15px;
+}
+.activity-text p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+}
+.bolli-news .activity-img {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+.activity-list > a:hover .activity-img img {
+  width: 150%;
+}
+.activity-img img {
+  position: absolute;
+  width: 130%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .8s;
+}
+.sub-content-item.activity-container .activity-date {
   color: var(--color-gray);
-  font-size: 1rem;
-}
+  font-size: 14px;
+} 
 
-/*페이징*/
+
+/* common CSS */
+/* paging */
 .paging {
   margin-bottom: 30px;
 }
@@ -1043,7 +1148,8 @@ text-overflow: ellipsis;
   background-color: var(--color-main);
   color: white;
 }
-/*검색*/
+
+/* search */
 .search {
   text-align: center;
   border-top: 1px solid var(--color-gray);

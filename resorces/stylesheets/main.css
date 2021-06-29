@@ -1,10 +1,20 @@
 /* common CSS */
-
 /*자세히보기 button*/
+/*04 activity, 05 holt-family title */
+.main-activity-content h2,
+#holt-family h2{
+  color: var(--color-main);
+}
+.main-activity-content h2 img,
+#holt-family h2 img {
+  transform: translateY(7px);
+  width: 30px;
+  margin-right: 4px;
+}
 
 /*전체보기 button*/
 .announcement > a,
-.activity-content > a {
+.main-activity-content > a {
   font-size: 14px;
   display: block;
   position: absolute;
@@ -12,24 +22,16 @@
   color: var(--color-main);
 }
 .announcement > a:hover,
-.activity-content > a:hover {
+.main-activity-content > a:hover {
   transform: translateX(5px);
   font-weight: bold;
 }
 
-/*04 activity, 05 holt-family title*/
-.activity-content h2,
-#holt-family h2{
-  color: var(--color-main);
-}
-.activity-content h2 img,
-#holt-family h2 img {
-  transform: translateY(7px);
-  width: 30px;
-  margin-right: 4px;
-}
 
-/*01메인 비주얼*/
+
+/*content CSS*/
+/* 01 main-visual */
+
 .main-visual {
   width: 100%;
   background-image: url('/resorces/images/main/visual-back-01.png');
@@ -38,42 +40,51 @@
   background-size: cover;
 }
 
-/*slick(before, after)-button*/
+/* slick(before, after)-button */
 .visual-slide .slick-prev,
 .visual-slide .slick-next {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--color-gray);
   background-color: transparent;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
   font-size: 0;
+  transition: .4s;
+}
+.visual-slide .slick-prev:hover,
+.visual-slide .slick-next:hover {
+  background-color: white;
+}
+.visual-slide .slick-prev:hover {
+  left: -8px;
+}
+.visual-slide .slick-next:hover {
+  right: -8px;
 }
 .visual-slide .slick-prev {
-  left: 120px;
+  left: 0;
 }
 .visual-slide .slick-next {
-  right: 120px;
+  right: 0;
+}
+.visual-slide .slick-prev:before,
+.visual-slide .slick-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: black;
+  font-size: 16px;
 }
 .visual-slide .slick-prev:before {
   content: '\f060';
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: black;
-  font-size: 0.8rem;
 }
 .visual-slide .slick-next:before {
   content: '\f061';
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: black;
-  font-size: 0.8rem;
 }
 
-/*slick-dot*/
+/* slick-dot */
 .slick-dots {
   position: absolute;
   left: 50%;
@@ -88,48 +99,53 @@
   border: none;
   font-size: 0;
   width: 30px;
-  height: 7px;
+  height: 4px;
   margin-right: 5px;
-  background-color: lightblue;
+  background-color: var(--color-gray);
 }
 .slick-dots li.slick-active button {
-  background-color: gray;
+  background-color: var(--color-main);
 }
 
-/*slide*/
+/* slide */
 .visual-slide {
-  width: 100%;
+  width: 1170px;
+  margin: auto;
   height: 500px;
   position: relative;
 }
 
-/*slider*/
-.visual-slider .slider-wrap {
-  width: 75vw;
+/* slider */
+.slider-wrap {
+  width: 100%;
   height: 500px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
-
-.visual-slider .slider-wrap .slider-text h2 {
-  font-size: 2.5rem;
+.slider-text {
+  width: 470px;
+  margin-right: 30px;
+}
+.slider-text h2 {
+  font-size: 40px;
   margin-bottom: 20px;
 }
-
-.visual-slider .slider-wrap .slider-text p {
-  margin-bottom: 60px;
-  font-size: 1.25rem;
+.slider-text h2 strong {
+  display: block;
+  font-size: 30px;
 }
-
-.visual-slider .slider-wrap .slider-text a {
+.slider-text p {
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+.slider-text a {
   display: block;
   width: 120px;
-  height: 28px;
+  padding: 3px;
   border: 2px solid var(--color-main);
-  border-radius: 20px;
   color: var(--color-main);
   background-color: white;
   text-align: center;
@@ -138,65 +154,33 @@
   font-weight: 600;
   transition: 300ms;
 }
-
-.visual-slider .slider-wrap .slider-text a:hover {
+.slider-text a:hover {
   color: white;
   background-color: var(--color-main);
 }
-
-/*파티용품대여*/
-.party .slider-img{
-  position: relative;
-}
-
-.party .slider-img > div{
-  border: 5px solid white;
-  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.3);
-}
-.party .slider-img > div.party-img1 {
-  width: 350px; 
-}
-.party .slider-img > div.party-img2 {
-  width: 270px;
-}
-.party .slider-img div img {
-  width: 100%;
-}
-.party-img2 {
-  position: absolute;
-  top: 90px;
-  left: -100px;
-}
-
-/*소개, 홀트패밀리, 반찬나눔, 상담*/
-.love-in-action .slider-img,
-.holt-family .slider-img,
-.sharing-dishes .slider-img,
-.counseling .slider-img {
+.slider-img {
   display: block;
   width: 400px;
 }
-
-.sharing-dishes .slider-img,
-.counseling .slider-img {
-  border: 5px solid white;
-  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.3);
-}
-
-.love-in-action .slider-img img,
-.holt-family .slider-img img,
-.sharing-dishes .slider-img img,
-.counseling .slider-img img {
+.slider-img img {
   width: 100%;
 }
 
+/*파티용품, 늘봄심리상담센터, 반찬나눔*/
+.party .slider-img,
+.sharing-dishes .slider-img,
+.counseling .slider-img {
+  border: 5px solid var(--color-lightmain);
+  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.3);
+}
+/*복지관 소개*/
 .love-in-action .slider-text p span {
-  display: inline-block;
+  display: block;
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 10px;
-
 }
+/*반찬 나눔*/
 .sharing-dishes .slider-text p span {
   font-size: 0.9rem;
   color: gray;
@@ -204,13 +188,15 @@
 .sharing-dishes .slider-text > span {
   display: inline-block;
   padding: 3px 17px;
-  border: 2px solid var(--color-main);
-  border-radius: 20px;
+  border-radius: 10px;
   color: var(--color-main);
   background-color: white;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 600;
+}
+.sharing-dishes .slider-text p {
+  margin-bottom: 30px;
 }
 
 /* 02 support */
@@ -296,6 +282,7 @@
 .support-item:nth-child(3) a:hover {
   background-color: var(--color-orange);
 }
+
 /* 03 infomation */
 article {
   margin-bottom: 20px;
@@ -466,13 +453,14 @@ article:last-child {
   font-size: 14px;
   color: gray;
 }
-/*전체보기 버튼*/
+
+/* 전체보기 button */
 .announcement > a {
   top: 3px;
   right: 0;
 }
 
-/* 04 activity story*/
+/* 04 activity story */
 #main-activity {
   background: url(../images/main/activity-back.jpg) no-repeat center center;
   background-size: 100%;
@@ -491,25 +479,25 @@ article:last-child {
   opacity: .7;
   z-index: 0;
 }
-.activity-content {
+.main-activity-content {
   width: 1170px;
   background-color: white;
   padding: 50px;
   margin: auto;
   position: relative;
 }
-.activity-content p {
+.main-activity-content p {
   margin-bottom: 30px;
 }
-.activity-items {
+.main-activity-items {
   display: flex;
   justify-content: space-between;
 }
-.activity-item {
+.main-activity-item {
   position: relative;
   width: 335px;
 }
-.activity-item em {
+.main-activity-item em {
   font-size: 12px;
   background-color: white;
   padding: 3px 5px;
@@ -518,18 +506,19 @@ article:last-child {
   left: 0;
   box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.39);
 }
-.activity-item img {
+.main-activity-item img {
   width: 100%;
   margin-bottom: 3px;
 }
-.activity-item h3 {
+.main-activity-item h3 {
   font-size: 18px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/*전체보기 버튼*/
-.activity-content > a {
+
+/* 전체보기 button */
+.main-activity-content > a {
   top: 80px;
   right: 30px;
 }
@@ -558,7 +547,7 @@ article:last-child {
 .holt-slider .slick-slide img {
   width: 100%;
 }
-/*holt-slider button*/
+/* holt-slider button */
 .holt-slider .slick-prev,
 .holt-slider .slick-next {
   border: 1px solid var(--color-gray);

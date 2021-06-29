@@ -1,3 +1,7 @@
+/*font*/
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
 /*reset CSS*/
 * {
   box-sizing: border-box;
@@ -29,7 +33,7 @@ button {
 /*default CSS*/
 body{
   margin: 0;
-  font-family: 'NanumSquare',san-serif;
+  font-family: 'NanumSquare', san-serif;
   font-size: 16px;
   line-height: 1.5;
   padding-top: 84px;
@@ -39,8 +43,8 @@ body{
   margin: auto;
 }
 section:not(.main-visual, .sub-visual) {
-  padding: 65px 0;
-  min-width: 1200px;
+  padding: 85px 0;
+  min-width: 1170px;
 }
 h2 {
   font-size: 24px;
