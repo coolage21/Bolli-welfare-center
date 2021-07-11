@@ -1,6 +1,9 @@
 /*font*/
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
 @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+/*font-awesome*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
 /*reset CSS*/
 * {
@@ -9,7 +12,7 @@
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 16px;
 }
 a {
   text-decoration: none;
@@ -42,9 +45,11 @@ body{
   width: 1170px;
   margin: auto;
 }
-section:not(.main-visual, .sub-visual) {
+section:not(.main-visual):not(.sub-visual) {
   padding: 85px 0;
-  min-width: 1170px;
+}
+section {
+  min-width: 1200px;
 }
 h2 {
   font-size: 24px;
@@ -86,14 +91,4 @@ h2 {
   --color-silver: rgb(212, 214, 226);
   --color-orange: rgb(235, 121, 133);
   --color-lightorange: rgb(251, 228, 231);
-
-  /*animation*/
-  --animation-basic: 300ms;
-  --animation-fast: 150ms;
-  --animation-slow: 1s;
-
-  /*font-size(sub-page)*/
-  --subpage-title: 2rem; /*h2*/
-  --subpage-subtitle: 1.75rem; /*h3*/
-  --subpage-main-text: 1.25rem;
 }

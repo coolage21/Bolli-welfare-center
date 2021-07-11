@@ -3,21 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>달서구본리종합사회복지관</title>
+  <!--favicon-->
   <link rel="shortcut icon" href="./resorces/images/main/bolli_favicon.ico">
-  <!--파피콘-->
+  <!--jQuery-->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <!--제이쿼리먼저-->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!--slickslider-->
-  <link rel="stylesheet" href="./resorces/stylesheets/style.css">
   <!--css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-  <!--폰트어썸-->
+  <link rel="stylesheet" href="./resorces/stylesheets/style.css">
+  <!--slickslider-->
+  <link rel="stylesheet" href="resorces/script/slick/slick.css">
+  <script defer src="resorces/script/slick/slick.js"></script>
+  <!--fontawesome-->
+  <link rel="stylesheet" href="resorces/script/fontawesome/all.css">
+  <!--script-->
   <script defer src="resorces/script/header.js"></script>
+  <script defer src="resorces/script/main.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
       </div>
       <div class="sub-visual-title">
         <span></span>
-        <h2>복지관소개</h2>
+        <h1>복지관소개</h1>
       </div>
       <nav class="intro-tab">
         <ul>
@@ -44,65 +45,67 @@
       </nav>
     </section>
     <section class="sub-content intro-purpose">
-      <div class="page-top">
-        <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
-        <span>복지관소개&nbsp;&#62;&nbsp;</span>
-        <span><strong>운영목적 및 목표</strong></span>
-      </div>
-      <div class="sub-content-title">
-        <h2>운영목적 및 목표</h2>
-      </div>
-      <div class="sub-content-item purpose-content">
-        <div class="purpose-title">
-          <h3>Love In Action<br>
-            사랑을 행동으로!</h3>
-          <p>지역주민과 함게 만들어가는 웃음과 행복, 열정이 넘치는 마을</p>
+      <div class="inner">
+        <div class="page-top">
+          <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
+          <span>복지관소개&nbsp;&#62;&nbsp;</span>
+          <span><strong>운영목적 및 목표</strong></span>
         </div>
-        <div class="purpose-desc">
-          <div class="purpose-name">
-            <i class="fas fa-hotel"></i>
-            <h5>달서구본리종합<br>사회복지회관</h5>
+        <div class="sub-content-title">
+          <h2>운영목적 및 목표</h2>
+        </div>
+        <div class="sub-content-item purpose-content">
+          <div class="purpose-title">
+            <h3>Love In Action<br>
+              사랑을 행동으로!</h3>
+            <p>지역주민과 함게 만들어가는 웃음과 행복, 열정이 넘치는 마을</p>
           </div>
-          <div class="purpose-lists">
-            <div class="purpose-list list1">
-              <span>01</span>
-              <div>
-                <img src="resorces/images/intro/purpose-01.png" alt="town icon">
-                <p>
-                <strong>균형적인 복지서비스 제공</strong>으로<br>
-                사각지대 없는 마을
-                </p>
-              </div>
+          <div class="purpose-desc">
+            <div class="purpose-name">
+              <i class="fas fa-hotel"></i>
+              <div>달서구본리종합<br>사회복지회관</div>
             </div>
-            <div class="purpose-list list2">
-              <span>02</span>
-              <div>
-                <img src="resorces/images/intro/purpose-02.png" alt="town icon">
-                <p>
-                <strong>건강한 가정, 행복한 가족</strong>을<br>
-                꿈꾸는 마을
-                </p>
+            <div class="purpose-lists">
+              <div class="purpose-list list1">
+                <span>01</span>
+                <div>
+                  <img src="resorces/images/intro/purpose-01.png" alt="town icon">
+                  <p>
+                    <strong>균형적인 복지서비스 제공</strong>으로<br>
+                    사각지대 없는 마을
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="purpose-list list3">
-              <span>03</span>
-              <div>
-                <img src="resorces/images/intro/purpose-03.png" alt="town icon">
-                <p>
-                  사람을 만나고<br><strong>공동체가 살아나는</strong>
-                  마을
-                </p>
+              <div class="purpose-list list2">
+                <span>02</span>
+                <div>
+                  <img src="resorces/images/intro/purpose-02.png" alt="family icon">
+                  <p>
+                    <strong>건강한 가정, 행복한 가족</strong>을<br>
+                    꿈꾸는 마을
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="purpose-list list4">
-              <span>04</span>
-              <div>
-                <img src="resorces/images/intro/purpose-04.png" alt="town icon">
-                <p>
-                  <strong>전문성</strong>을 갖춘
-                  <strong>사회복지실천가</strong>가<br>
-                  함께하는 마을
-                </p>
+              <div class="purpose-list list3">
+                <span>03</span>
+                <div>
+                  <img src="resorces/images/intro/purpose-03.png" alt="neighbor icon">
+                  <p>
+                    사람을 만나고<br><strong>공동체가 살아나는</strong>
+                    마을
+                  </p>
+                </div>
+              </div>
+              <div class="purpose-list list4">
+                <span>04</span>
+                <div>
+                  <img src="resorces/images/intro/purpose-04.png" alt="counselor icon">
+                  <p>
+                    <strong>전문성</strong>을 갖춘
+                    <strong>사회복지실천가</strong>가<br>
+                    함께하는 마을
+                  </p>
+                </div>
               </div>
             </div>
           </div>

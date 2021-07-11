@@ -40,7 +40,7 @@
   background-color: var(--color-blue);
   margin-bottom: 10px;
 }
-.sub-visual .sub-visual-title h2 {
+.sub-visual .sub-visual-title h1 {
   font-size: 30px;
 }
 
@@ -53,7 +53,7 @@ nav.intro-tab {
 nav.intro-tab ul {
   display: flex;
   margin: auto;
-  width: 1200px;
+  width: 1170px;
   height: 40px;
 }
 nav.intro-tab ul li {
@@ -74,9 +74,7 @@ nav.intro-tab ul li a {
   border-bottom: none;
 }
 nav.intro-tab ul li a.on {
-  height: 43px;
   font-size: 18px;
-  border: 1px solid white;
   background-color: white;
   color: black;
   font-weight: 600;
@@ -84,10 +82,7 @@ nav.intro-tab ul li a.on {
 
 /* 00-3 subpage-section */
 section.sub-content {
-  width: 1170px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
 }
 /* 00-4 section page */
 .page-top {
@@ -226,10 +221,10 @@ section.intro-greeting .greeting-content .greeting-img {
 .purpose-desc .purpose-name .fas {
   margin-bottom: 10px;
   color: var(--color-gray);
-  font-size: 2rem;
+  font-size: 32px;
 }
-.purpose-desc .purpose-name h5 {
-  font-size: 1.25rem;
+.purpose-desc .purpose-name div {
+  font-size: 20px;
   font-weight: 800;
 }
 .purpose-lists {
@@ -325,11 +320,11 @@ section.intro-greeting .greeting-content .greeting-img {
 .holt-value h4 {
   color: white;
   background-color: var(--color-blue);
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 600;
   margin-right: 30px;
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   text-align: center;
   top: 50%;
@@ -350,8 +345,8 @@ section.intro-greeting .greeting-content .greeting-img {
 .holt-value h4:before {
   position: absolute;
   content: '';
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background-color: white;
   border: 1px solid var(--color-blue);
@@ -536,7 +531,7 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   cursor: pointer;
 }
 .staff-btn label:last-child {
-  margin-right: none;
+  margin-right: 0;
 }
 
 /* 06-1 조직도 */
@@ -663,6 +658,30 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   border-collapse: collapse;
   border-top : 3px solid var(--color-main);
 }
+.slide2 th:nth-child(1) {
+  width: 10%;
+}
+.slide2 th:nth-child(2) {
+  width: 11%;
+}
+.slide2 th:nth-child(3) {
+  width: 9%;
+}
+.slide2 th:nth-child(4) {
+  width: 25%;
+}
+.slide2 th:nth-child(5) {
+  width: 45%;
+}
+.slide3 th:nth-child(1) {
+  width: 20%;
+}
+.slide3 th:nth-child(2) {
+  width: 40%;
+}
+.slide3 th:nth-child(3) {
+  width: 40%;
+}
 .staff-content.slide2 table tr th,
 .staff-content.slide2 table tr td,
 .staff-content.slide3 table tr th,
@@ -773,13 +792,13 @@ section.sub-content .sub-content-item.case-management-content > p {
 
 .procedure > h3,
 .management-welephone > h3 {
-  font-size: 1.75rem;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 .procedure > h3 > span,
 .management-welephone > h3 > span {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 24px;
   padding: 0 5px;
   color: white;
   background-color: var(--color-main);
@@ -833,7 +852,7 @@ section.sub-content .sub-content-item.case-management-content > p {
 }
 .case-management-flowchart > h3 {
   display: inline-block;
-  font-size: 1.75rem;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 40px;
   border-bottom: 2px solid var(--color-main);
@@ -994,6 +1013,21 @@ thead th  {
   border-bottom: 1px solid var(--color-main);
   padding: 6px 0;
 }
+thead th:nth-child(1) {
+  width: 7%;
+}
+thead th:nth-child(2) {
+  width: 60%;
+}
+thead th:nth-child(3) {
+  width: 10%;
+}
+thead th:nth-child(4) {
+  width: 16%;
+}
+thead th:nth-child(5) {
+  width: 7%;
+}
 tbody td.table-subject {
   text-align: left;
   padding-left: 10px;
@@ -1096,7 +1130,7 @@ tbody td a:hover {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: black;
-  font-size: 0.8rem;
+  font-size: 14.5px;
   display: block;
   width: 42px;
   height: 42px;
@@ -1108,7 +1142,7 @@ tbody td a:hover {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: black;
-  font-size: 0.8rem;
+  font-size: 14.5px;
   display: block;
   width: 42px;
   height: 42px;
@@ -1120,7 +1154,7 @@ tbody td a:hover {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: black;
-  font-size: 0.8rem;
+  font-size: 14.5px;
   display: block;
   width: 42px;
   height: 42px;
@@ -1132,7 +1166,7 @@ tbody td a:hover {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: black;
-  font-size: 0.8rem;
+  font-size: 14.5px;
   display: block;
   width: 42px;
   height: 42px;
@@ -1163,7 +1197,7 @@ tbody td a:hover {
 }
 .search select {
   width: 147px;
-  font-size: 1.1rem;
+  font-size: 17px;
 }
 .search input[type=search] {
   width: 260px;

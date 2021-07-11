@@ -3,21 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>달서구본리종합사회복지관</title>
+  <!--favicon-->
   <link rel="shortcut icon" href="./resorces/images/main/bolli_favicon.ico">
-  <!--파피콘-->
+  <!--jQuery-->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <!--제이쿼리먼저-->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!--slickslider-->
-  <link rel="stylesheet" href="./resorces/stylesheets/style.css">
   <!--css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-  <!--폰트어썸-->
+  <link rel="stylesheet" href="./resorces/stylesheets/style.css">
+  <!--slickslider-->
+  <link rel="stylesheet" href="resorces/script/slick/slick.css">
+  <script defer src="resorces/script/slick/slick.js"></script>
+  <!--fontawesome-->
+  <link rel="stylesheet" href="resorces/script/fontawesome/all.css">
+  <!--script-->
   <script defer src="resorces/script/header.js"></script>
+  <script defer src="resorces/script/main.js"></script>
 </head>
 
 <body>
@@ -29,18 +30,19 @@
       </div>
       <div class="sub-visual-title">
         <span></span>
-        <h2>후원·자원봉사</h2>
+        <h1>후원·자원봉사</h1>
       </div>
       <nav class="intro-tab">
         <ul>
           <li><a href="#none">후원안내</a></li>
-          <li><a href="#none" class="on">후원신청</a></li>
+          <li><a href="support.html" class="on">후원신청</a></li>
           <li><a href="#none">자원봉사안내</a></li>
           <li><a href="#none">자원봉사신청</a></li>
         </ul>
       </nav>
     </section>
     <section class="sub-content support">
+      <div class="inner">
       <div class="page-top">
         <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
         <span>후원·자원봉사&nbsp;&#62;&nbsp;</span>
@@ -89,7 +91,6 @@
         </div>
         <table>
           <caption>기본정보</caption>
-          <colgroup></colgroup>
           <tbody>
             <tr>
               <th scope="row">이름</th>
@@ -111,7 +112,7 @@
             <tr>
               <th scope="row">후원방식</th>
               <td>
-                <input id="regulary" type="radio" name="support-method">
+                <input id="regulary" type="radio" name="support-method" checked>
                 <input id="irregulary" type="radio" name="support-method">
                 <div class="btn">
                   <label for="regulary">정기</label>
@@ -122,7 +123,7 @@
             <tr>
               <th scope="row">후원이름</th>
               <td>
-                <input type="radio" name="support-name" id="name1">
+                <input type="radio" name="support-name" id="name1" checked>
                 <input type="radio" name="support-name" id="name2">
                 <input type="radio" name="support-name" id="name3">
                 <div class="btn">
@@ -135,7 +136,7 @@
             <tr>
               <th>후원금액</th>
               <td>
-                <input type="radio" name="support-amount" id="amount1">
+                <input type="radio" name="support-amount" id="amount1" checked>
                 <input type="radio" name="support-amount" id="amount2">
                 <input type="radio" name="support-amount" id="amount3">
                 <div class="btn">
@@ -148,7 +149,7 @@
             <tr>
               <th scope="row">결제수단</th>
               <td>
-                <input type="radio" name="support-means" id="means1">
+                <input type="radio" name="support-means" id="means1" checked>
                 <input type="radio" name="support-means" id="means2">
                 <input type="radio" name="support-means" id="means3">
                 <div class="btn">
@@ -172,7 +173,7 @@
           <button>취소하기</button>
         </div>
       </form>
-
+    </div>
     </section>
   </main>
   <div class="footer-include"></div>

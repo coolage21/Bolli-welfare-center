@@ -3,21 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>달서구본리종합사회복지관</title>
+  <!--favicon-->
   <link rel="shortcut icon" href="./resorces/images/main/bolli_favicon.ico">
-  <!--파피콘-->
+  <!--jQuery-->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <!--제이쿼리먼저-->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!--slickslider-->
-  <link rel="stylesheet" href="./resorces/stylesheets/style.css">
   <!--css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-  <!--폰트어썸-->
+  <link rel="stylesheet" href="./resorces/stylesheets/style.css">
+  <!--slickslider-->
+  <link rel="stylesheet" href="resorces/script/slick/slick.css">
+  <script defer src="resorces/script/slick/slick.js"></script>
+  <!--fontawesome-->
+  <link rel="stylesheet" href="resorces/script/fontawesome/all.css">
+  <!--script-->
   <script defer src="resorces/script/header.js"></script>
+  <script defer src="resorces/script/main.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
       </div>
       <div class="sub-visual-title">
         <span></span>
-        <h2>복지관소개</h2>
+        <h1>복지관소개</h1>
       </div>
       <nav class="intro-tab">
         <ul>
@@ -44,60 +45,59 @@
       </nav>
     </section>
     <section class="sub-content intro-map">
-      <div class="page-top">
-        <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
-        <span>복지관소개&nbsp;&#62;&nbsp;</span>
-        <span><strong>찾아오시는 길</strong></span>
-      </div>
-      <div class="sub-content-title">
-        <h2>찾아오시는 길</h2>
-      </div>
-      <div class="sub-content-item map-content">
-        <div class="map-img">
-
+      <div class="inner">
+        <div class="page-top">
+          <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
+          <span>복지관소개&nbsp;&#62;&nbsp;</span>
+          <span><strong>찾아오시는 길</strong></span>
         </div>
-
-        <div class="map-text">
-          <div class="address">
-            <h3><i class="fas fa-map-marked-alt"></i>오시는 길</h3>
-            <p>
-            <strong>주소</strong>
-            <span>12345
-              대구광역시 달서구 당산로00-00(본리동)
-              본리종합사회복지관</span>
-            </p>
-            <p>
-            <strong>대표전화</strong>
-            <span>053)555-5555</span>
-            </p>
+        <div class="sub-content-title">
+          <h2>찾아오시는 길</h2>
+        </div>
+        <div class="sub-content-item map-content">
+          <div class="map-img">
           </div>
-          <div class="bus">
-            <h3><i class="fas fa-bus"></i>버스 안내</h3>
-            <p>
-            <strong>156, 356, 518, 653, 726, 달서5</strong>
-            <span>(제일여자상업고등학교 하차)</span>
-            </p>
-            <p>
-            <strong>306, 달서4, 서구1</strong>
-            <span>(성당래미안e편한세상 하차)</span>
-            </p>
-            <p>
-            <strong>805</strong>
-            <span>(달서종합시장 하차)</span>
-            </p>
+          <div class="map-text">
+            <div class="address">
+              <h3><i class="fas fa-map-marked-alt"></i>오시는 길</h3>
+              <p>
+                <strong>주소</strong>
+                <span>12345
+                  대구광역시 달서구 당산로00-00(본리동)
+                  본리종합사회복지관</span>
+              </p>
+              <p>
+                <strong>대표전화</strong>
+                <span>053)555-5555</span>
+              </p>
+            </div>
+            <div class="bus">
+              <h3><i class="fas fa-bus"></i>버스 안내</h3>
+              <p>
+                <strong>156, 356, 518, 653, 726, 달서5</strong>
+                <span>(제일여자상업고등학교 하차)</span>
+              </p>
+              <p>
+                <strong>306, 달서4, 서구1</strong>
+                <span>(성당래미안e편한세상 하차)</span>
+              </p>
+              <p>
+                <strong>805</strong>
+                <span>(달서종합시장 하차)</span>
+              </p>
+            </div>
+            <div class="subway">
+              <h3><i class="fas fa-subway"></i>지하철 안내</h3>
+              <p>
+                <strong>1호선</strong>
+                <span>서부정류장역 1번 출구 > 518, 726<br>(제일여자상업고등학교 하차)</span>
+              </p>
+              <P>
+                <strong>2호선</strong>
+                <span>두류역 3번 출구 > 156, 356<br>(제일여자상업고등학교 하차)</span>
+              </p>
+            </div>
           </div>
-          <div class="subway">
-            <h3><i class="fas fa-subway"></i>지하철 안내</h3>
-            <p>
-            <strong>1호선</strong>
-            <span>서부정류장역 1번 출구 > 518, 726<br>(제일여자상업고등학교 하차)</span>
-            </p>
-            <P>
-            <strong>2호선</strong>
-            <span>두류역 3번 출구 > 156, 356<br>(제일여자상업고등학교 하차)</span>
-            </p>
-          </div>
-
         </div>
       </div>
     </section>

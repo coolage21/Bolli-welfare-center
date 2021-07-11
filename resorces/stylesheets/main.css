@@ -34,8 +34,9 @@
 
 .main-visual {
   width: 100%;
+  height: 500px;
   background-image: url('/resorces/images/main/visual-back-01.png');
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -150,7 +151,6 @@
   background-color: white;
   text-align: center;
   line-height: 28px;
-  font-size: 1rem;
   font-weight: 600;
   transition: 300ms;
 }
@@ -176,13 +176,13 @@
 /*복지관 소개*/
 .love-in-action .slider-text p span {
   display: block;
-  font-size: 1.3rem;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 /*반찬 나눔*/
 .sharing-dishes .slider-text p span {
-  font-size: 0.9rem;
+  font-size: 14.5px;
   color: gray;
 }
 .sharing-dishes .slider-text > span {
@@ -192,7 +192,7 @@
   color: var(--color-main);
   background-color: white;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 600;
 }
 .sharing-dishes .slider-text p {
