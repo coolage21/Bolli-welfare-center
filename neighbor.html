@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <a href="#campaign-neighbor" class="skip">본문 바로가기</a>
   <div class="header-include"></div>
   <main>
     <section class="sub-visual">
@@ -38,17 +39,17 @@
           <li><a href="neighbor.html" class="on">나눔이 필요한 이웃</a></li>
         </ul>
       </nav>
-    </section>
-    <section class="sub-content campaign-neighbor">
+    </section><!--sub visual end-->
+    <section id="campaign-neighbor" class="sub-content">
       <div class="inner">
-        <div class="page-top">
+        <div class="page-location">
           <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
           <span>캠페인&nbsp;&#62;&nbsp;</span>
           <span><strong>나눔이 필요한 이웃</strong></span>
-        </div>
+        </div><!--page-location end-->
         <div class="sub-content-title">
           <h2>나눔이 필요한 이웃</h2>
-        </div>
+        </div><!--title end-->
         <div class="sub-content-item neighbor-container">
           <div class="details">
             + 총게시물:33[1/3]
@@ -172,7 +173,7 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </div><!--neighbor container end-->
         <div class="paging">
           <ol>
             <li class="first"><a href="#none"><span class="hide">첫페이지</span></a></li>
@@ -185,17 +186,18 @@
             <li class="next"><a href="#none"><span class="hide">다음페이지</span></a></li>
             <li class="last"><a href="#none"><span class="hide">마지막페이지</span></a></li>
           </ol>
-        </div>
+        </div><!--paging end-->
         <div class="search">
-          <label for="neighbor-search" class=".hide">나눔이 필요한 이웃 검색 키워드:</label>
+          <label for="neighbor-search" class="hide">나눔이 필요한 이웃 검색 키워드:</label>
           <select name="search" id="neighbor-search">
             <option value="title">제목</option>
             <option value="writer">작성자</option>
             <option value="content">내용</option>
           </select>
-          <input type="search">
+          <input type="search" id="neighbor-search-bar" placeholder="내용을 작성해주세요.">
+          <label for="neighbor-search-bar" class="hide">검색창</label>
           <button>검색</button>
-        </div>
+        </div><!-- search end-->
       </div>
     </section>
   </main>

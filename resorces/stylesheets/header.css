@@ -5,8 +5,9 @@ header {
   background-color: white;
   position: fixed;
   z-index:999;
-  border-bottom: 2px solid var(--color-gray);
+  border-bottom: 2px solid var(--color-silver);
 }
+
 /*로고*/
 header  .header-logo {
   width: 300px;
@@ -31,9 +32,6 @@ header  .submenu {
 }
 
 /*메인메뉴*/
-.mainmenu {
-   
-}
 .mainmenu > .mainmenu-wrap > nav > ul {
   display: flex;
   justify-content: flex-end;
@@ -56,7 +54,6 @@ header  .submenu {
   font-weight: 600;
   position: relative;
 }
-
 .mainmenu > .mainmenu-wrap > nav > ul > li > a:after {
   content: '';
   width: 0;
@@ -87,7 +84,7 @@ header  .submenu {
   z-index: -1;
   border: 1px solid var(--color-lightgray);
 }
-.mainmenu > .mainmenu-wrap > nav > ul:hover ul {
+.mainmenu > .mainmenu-wrap > nav > ul.on ul {
   opacity: 1;
   visibility: visible;
 }
@@ -96,7 +93,6 @@ header  .submenu {
   height: 50px;
   line-height: 50px;
   display: block;
-  width: inherit;
   transition: 200ms;
 }
 .mainmenu > .mainmenu-wrap > nav > ul ul li a:hover {

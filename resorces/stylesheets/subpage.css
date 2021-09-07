@@ -44,7 +44,7 @@
   font-size: 30px;
 }
 
-/* 00-2 menu */
+/* 00-2 subpage menu */
 nav.intro-tab {
   position: absolute;
   bottom: 0;
@@ -84,8 +84,8 @@ nav.intro-tab ul li a.on {
 section.sub-content {
   margin: auto;
 }
-/* 00-4 section page */
-.page-top {
+/* 00-4 page location */
+.page-location {
   font-size: 14px;
   color: var(--color-gray);
   text-align: right;
@@ -108,7 +108,7 @@ section.sub-content .sub-content-item p {
 }
 
 /* 01 greeting */
-section.intro-greeting .greeting-content .greeting-img {
+section#intro-greeting .greeting-content .greeting-img {
   width: inherit;
   height: 40vh;
   overflow: hidden;
@@ -396,11 +396,11 @@ section.intro-greeting .greeting-content .greeting-img {
   width: 750px;
   margin: auto;
   border-collapse: collapse;
-  border-top : 3px solid var(--color-main);
+  border-top : 2px solid var(--color-main);
 }
 .overview-content table tr th,
 .overview-content table tr td {
-  border: 1px solid var(--color-silver);
+  border: 1px solid var(--color-gray);
   padding: 7px 20px;
   box-sizing: border-box;
 }
@@ -424,7 +424,6 @@ section.intro-greeting .greeting-content .greeting-img {
 .history-container > div.history-right {
   margin-left: 50%;
   padding-left: 40px;
-
 }
 .history-container > div.history-right:before {
   content: '';
@@ -509,7 +508,7 @@ input[id=committee]:checked ~ .slide3 {
 }
 input[id=chart]:checked ~ .staff-btn label[for=chart],
 input[id=division]:checked ~ .staff-btn label[for=division],
-input[id=committee]:checked ~ .staff-btn label[for=committee] {
+input[id=committee]:checked ~ .staff-btn label[for=committee],.staff-btn label:hover {
   background-color: var(--color-lightmain);
   font-weight: 600;
   color: black;
@@ -541,6 +540,7 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   position: relative;
   font-size: 18px;
 }
+
 /* 조직도 선 */
 .slide1 > div {
   text-align: center;
@@ -581,17 +581,17 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   top: 300px;
 }
 .slide1 .manager1 {
-  left: 100px;
+  left: 90px;
 }
 .slide1 .manager2 {
-  right: 100px;
+  right: 90px;
 }
 
 /* 위원회 */
 .slide1 > ul > li > ul.committee {
   position: absolute;
   top: 5px;
-  right: 100px;
+  right: 90px;
 }
 .slide1 > ul > li > ul.committee > li > span {
   display: block;
@@ -627,14 +627,14 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
   text-align: center;
 }
 .slide1 table.general-affairs {
-  left: 100px;
+  left: 90px;
 }
 .slide1 table.social-welfare {
   left: 50%;
   transform: translateX(-50%);
 }
 .slide1 table.case-management {
-  right: 100px;
+  right: 90px;
 }
 .slide1 table.general-affairs th,
 .slide1 table.social-welfare th {
@@ -656,7 +656,7 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
 .staff-content.slide3 table {
   width: 100%;
   border-collapse: collapse;
-  border-top : 3px solid var(--color-main);
+  border-top: 2px solid var(--color-main);
 }
 .slide2 th:nth-child(1) {
   width: 10%;
@@ -686,7 +686,7 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
 .staff-content.slide2 table tr td,
 .staff-content.slide3 table tr th,
 .staff-content.slide3 table tr td {
-  border: 1px solid gray;
+  border: 1px solid var(--color-gray);
   padding: 7px 0;
   box-sizing: border-box;
 }
@@ -706,7 +706,7 @@ input[id=committee]:checked ~ .staff-btn label[for=committee] {
 }
 
 /* 07 찾아오시는길 */
-.map-img {
+#map {
   width: 100%;
   height: 500px;
   background-color: var(--color-lightgray);
@@ -820,14 +820,14 @@ section.sub-content .sub-content-item.case-management-content > p {
 .procedure > div > p.question,
 .welephone div .question {
   width: 100%;
-  border: 2px solid blue;
-  color: blue;
+  border: 1px solid var(--color-main);
+  color: var(--color-main);
   font-weight: 600;
   padding: 5px 0;
   box-sizing: border-box;
 }
 .welephone-content p.question {
-  border: 2px solid var(--color-orange);
+  border: 1px solid var(--color-orange);
   color: var(--color-orange);
 }
 .procedure > div > p.answer,
@@ -843,8 +843,6 @@ section.sub-content .sub-content-item.case-management-content > p {
   background-color: var(--color-lightgray);
   height: 300PX;
 }
-
-
 
 /* flowchart */
 .case-management-flowchart {
@@ -1008,43 +1006,43 @@ label[for=regulary], label[for=irregulary], label[for=name1], label[for=name2], 
   margin-bottom: 40px;
   font-size: 18px;
 }
-thead th  {
+.neighbor-table thead th  {
   border-top: 2px solid var(--color-main);
   border-bottom: 1px solid var(--color-main);
   padding: 6px 0;
 }
-thead th:nth-child(1) {
+.neighbor-table thead th:nth-child(1) {
   width: 7%;
 }
-thead th:nth-child(2) {
+.neighbor-table thead th:nth-child(2) {
   width: 60%;
 }
-thead th:nth-child(3) {
+.neighbor-tablethead th:nth-child(3) {
   width: 10%;
 }
-thead th:nth-child(4) {
+.neighbor-table th:nth-child(4) {
   width: 16%;
 }
-thead th:nth-child(5) {
+.neighbor-table th:nth-child(5) {
   width: 7%;
 }
-tbody td.table-subject {
+.neighbor-table tbody td.table-subject {
   text-align: left;
   padding-left: 10px;
 }
-tbody td {
-  border-bottom: 1px solid var(--color-silver);
+.neighbor-table tbody td {
+  border-bottom: 1px solid var(--color-gray);
   padding: 10px 0;
 }
-tbody td a {
+.neighbor-table tbody td a {
   transition: .2s;
 }
-tbody td a:hover {
+.neighbor-table tbody td a:hover {
   color: var(--color-main);
 }
 
 /* 11 본리소식-현장이야기 */
-.bolli-news .activity-container {
+#bolli-news .activity-container {
   width: 100%;
 }
 .activity-container .details {
@@ -1063,7 +1061,7 @@ tbody td a:hover {
   width: 370px;
   margin-bottom: 40px;
   position: relative;
-  border: 1px solid var(--color-silver);
+  border: 1px solid var(--color-gray);
 }
 .activity-list > a {
   width: 100%;
@@ -1086,7 +1084,7 @@ tbody td a:hover {
   text-overflow: ellipsis;
   margin-bottom: 5px;
 }
-.bolli-news .activity-img {
+#bolli-news .activity-img {
   width: 100%;
   height: 260px;
   position: relative;

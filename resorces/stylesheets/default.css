@@ -36,6 +36,7 @@ button {
 /*default CSS*/
 body{
   margin: 0;
+  background-color: white;
   font-family: 'NanumSquare', san-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -53,6 +54,7 @@ section {
 }
 h2 {
   font-size: 24px;
+  font-weight: 800;
 }
 .hide {
   display: block;
@@ -61,7 +63,7 @@ h2 {
   border: 0;
   width: 1px;
   height: 1px;
-  clip:rect(1px, 1px, 1px, 1px);
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .skip {
   position: absolute;
@@ -89,6 +91,34 @@ h2 {
   --color-gray: rgb(164, 166, 175);
   --color-lightgray: rgb(236, 236, 236);
   --color-silver: rgb(212, 214, 226);
-  --color-orange: rgb(235, 121, 133);
+  --color-orange: rgb(253, 87, 91);
   --color-lightorange: rgb(251, 228, 231);
+}
+
+/* common CSS */
+/*자세히보기 button*/
+.main-activity-content h2,
+#holt-family h2{
+  color: var(--color-main);
+}
+.main-activity-content h2 img,
+#holt-family h2 img {
+  transform: translateY(7px);
+  width: 30px;
+  margin-right: 4px;
+}
+
+/*전체보기 button*/
+.announcement > a,
+.main-activity-content > a {
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  transition: .4s;
+  color: var(--color-main);
+}
+.announcement > a:hover,
+.main-activity-content > a:hover {
+  transform: translateX(5px);
+  font-weight: bold;
 }

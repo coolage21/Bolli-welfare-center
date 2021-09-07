@@ -19,9 +19,11 @@
   <!--script-->
   <script defer src="resorces/script/header.js"></script>
   <script defer src="resorces/script/main.js"></script>
+  <script defer src="resorces/script/map.js"></script>
 </head>
 
 <body>
+  <a href="#intro-map" class="skip">본문 바로가기</a>
   <div class="header-include"></div>
   <main>
     <section class="sub-visual">
@@ -43,19 +45,19 @@
           <li><a href="intro-map.html" class="on">찾아오시는 길</a></li>
         </ul>
       </nav>
-    </section>
-    <section class="sub-content intro-map">
+    </section><!--sub visual end-->
+    <section id="intro-map" class="sub-content">
       <div class="inner">
-        <div class="page-top">
+        <div class="page-location">
           <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
           <span>복지관소개&nbsp;&#62;&nbsp;</span>
           <span><strong>찾아오시는 길</strong></span>
-        </div>
+        </div><!--page-location end-->
         <div class="sub-content-title">
           <h2>찾아오시는 길</h2>
-        </div>
+        </div><!--title end-->
         <div class="sub-content-item map-content">
-          <div class="map-img">
+          <div id="map">
           </div>
           <div class="map-text">
             <div class="address">
@@ -97,12 +99,13 @@
                 <span>두류역 3번 출구 > 156, 356<br>(제일여자상업고등학교 하차)</span>
               </p>
             </div>
-          </div>
-        </div>
+          </div><!--map text end-->
+        </div><!--map content end-->
       </div>
     </section>
   </main>
   <div class="footer-include"></div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=672c600f16cab0f4369c686cfadd545b"></script>
 </body>
 
 </html>

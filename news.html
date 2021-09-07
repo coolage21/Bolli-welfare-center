@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <a href="#bolli-news" class="skip">본문 바로가기</a>
   <div class="header-include"></div>
   <main>
     <section class="sub-visual">
@@ -41,17 +42,17 @@
           <li><a href="#none">자유게시판</a></li>
         </ul>
       </nav>
-    </section>
-    <section class="sub-content bolli-news">
+    </section><!--sub visual end-->
+    <section id="bolli-news" class="sub-content">
       <div class="inner">
-        <div class="page-top">
+        <div class="page-location">
           <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
           <span>본리소식&nbsp;&#62;&nbsp;</span>
           <span><strong>현장이야기</strong></span>
-        </div>
+        </div><!--page-location end-->
         <div class="sub-content-title">
           <h2>현장이야기</h2>
-        </div>
+        </div><!--title end-->
         <div class="sub-content-item activity-container">
           <p class="details">
             <span>
@@ -67,7 +68,7 @@
             <span>
               &nbsp;&nbsp;총게시물: 894[1/56]
             </span>
-          </p>
+          </p><!--details end-->
           <div class="activity-item activity-content">
             <div class="activity-list">
               <a href="#none">
@@ -237,8 +238,8 @@
                 </div>
               </a>
             </div>
-          </div>
-        </div>
+          </div><!--acitivity content end-->
+        </div><!--activity container end-->
         <div class="paging">
           <ol>
             <li class="first"><a href="#none"><span class="hide">첫페이지</span></a></li>
@@ -251,7 +252,7 @@
             <li class="next"><a href="#none"><span class="hide">다음페이지</span></a></li>
             <li class="last"><a href="#none"><span class="hide">마지막페이지</span></a></li>
           </ol>
-        </div>
+        </div><!--paging end-->
         <div class="search">
           <label for="activity-search" class="hide">현장이야기 검색키워드</label>
           <select name="search" id="activity-search">
@@ -259,9 +260,10 @@
             <option value="writer">작성자</option>
             <option value="content">내용</option>
           </select>
-          <input type="search">
+          <input type="search" id="news-search-bar" placeholder="내용을 작성해주세요.">
+          <label for="news-search-bar" class="hide">검색창</label>
           <button>검색</button>
-        </div>
+        </div><!--search end-->
       </div>
     </section>
   </main>

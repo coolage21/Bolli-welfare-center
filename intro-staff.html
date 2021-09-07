@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <a href="#intro-staff" class="skip">본문 바로가기</a>
   <div class="header-include"></div>
   <main>
     <section class="sub-visual">
@@ -43,17 +44,17 @@
           <li><a href="intro-map.html">찾아오시는 길</a></li>
         </ul>
       </nav>
-    </section>
-    <section class="sub-content intro-staff">
+    </section><!--sub visual end-->
+    <section id="intro-staff" class="sub-content">
       <div class="inner">
-        <div class="page-top">
+        <div class="page-location">
           <span><i class="fas fa-home"></i>&nbsp;&#62;&nbsp;</span>
           <span>복지관소개&nbsp;&#62;&nbsp;</span>
           <span><strong>함께하는 사람들</strong></span>
-        </div>
+        </div><!--page-location end-->
         <div class="sub-content-title">
           <h2>함께하는 사람들</h2>
-        </div>
+        </div><!--title end-->
         <div class="sub-content-item staff-container">
           <input type="radio" name="staff-menu" id="chart" checked>
           <input type="radio" name="staff-menu" id="division">
@@ -62,10 +63,10 @@
             <label for="chart">조직도</label>
             <label for="division">업무분장</label>
             <label for="committee">운영위원회</label>
-          </div>
+          </div><!--staff btn end-->
           <div class="staff-content slide1">
             <div>
-              <img src="./resorces/images/intro/무제-2-01.png" alt="조직도 선">
+              <img src="./resorces/images/intro/line.png" alt="조직도 선">
             </div>
             <ul>
               <li>
@@ -83,6 +84,7 @@
                   <li>
                     <p class="manager1">과장</p>
                     <table class="general-affairs">
+                      <caption class="hide">본리사회종합복지관 조직도 내 기획총무팀의 역할</caption>
                       <tbody>
                         <tr>
                           <th>기획총무팀</th>
@@ -99,6 +101,7 @@
                   <li>
                     <p class="hide"></p>
                     <table class="social-welfare">
+                      <caption class="hide">본리사회종합복지관 조직도 내 사회복지팀의 역할</caption>
                       <tbody>
                         <tr>
                           <th>사회복지팀</th>
@@ -119,6 +122,7 @@
                   <li>
                     <p class="manager2">과장</p>
                     <table class="case-management">
+                      <caption class="hide">본리사회종합복지관 조직도 내 사례관리팀의 역할</caption>
                       <tbody>
                         <tr>
                           <th colspan="2">사례관리팀</th>
@@ -142,9 +146,10 @@
                 </ul>
               </li>
             </ul>
-          </div>
+          </div><!--조직도(slide1) end-->
           <div class="staff-content slide2">
             <table>
+              <caption class="hide">업무분장</caption>
               <thead>
                 <tr>
                   <th colspan="2">구분</th>
@@ -259,7 +264,7 @@
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div><!--업무분장(slide2) end-->
           <div class="staff-content slide3">
             <table>
               <caption class="hide">운영위원회</caption>
@@ -317,8 +322,8 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
+          </div><!--운영위원회(slide3) end-->
+        </div><!--staff container end-->
       </div>
     </section>
   </main>

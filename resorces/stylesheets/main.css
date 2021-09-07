@@ -1,41 +1,8 @@
-/* common CSS */
-/*자세히보기 button*/
-/*04 activity, 05 holt-family title */
-.main-activity-content h2,
-#holt-family h2{
-  color: var(--color-main);
-}
-.main-activity-content h2 img,
-#holt-family h2 img {
-  transform: translateY(7px);
-  width: 30px;
-  margin-right: 4px;
-}
-
-/*전체보기 button*/
-.announcement > a,
-.main-activity-content > a {
-  font-size: 14px;
-  display: block;
-  position: absolute;
-  transition: .4s;
-  color: var(--color-main);
-}
-.announcement > a:hover,
-.main-activity-content > a:hover {
-  transform: translateX(5px);
-  font-weight: bold;
-}
-
-
-
-/*content CSS*/
 /* 01 main-visual */
-
 .main-visual {
   width: 100%;
   height: 500px;
-  background-image: url('/resorces/images/main/visual-back-01.png');
+  background-image: url('../images/main/visual-back-01.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,6 +99,7 @@
 }
 .slider-text h2 {
   font-size: 40px;
+  font-weight: 800;
   margin-bottom: 20px;
 }
 .slider-text h2 strong {
@@ -356,7 +324,8 @@ article:last-child {
 }
 .guidance-desc a:hover {
   font-weight: bold;
-  background-color: var(--color-silver);
+  color: var(--color-y)
+  background-color: var(--color-main);
 }
 .guidance-desc p {
   margin-bottom: 20px;
@@ -383,39 +352,21 @@ article:last-child {
 }
 .related-sites {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
   margin-right: 30px;
 }
-.related-sites::before, .related-sites::after {
-  content: '';
-  background-color: var(--color-silver);
-  position: absolute;
-  transition: .4s;
-}
-.related-sites::before {
-  width: inherit;
-  height: 1px;
-  top: 50%;
-}
-.related-sites::after {
-  height: inherit;
-  width: 1px;
-  left: 50%;
-  z-index: 4;
-}
-.related-sites:hover::before, .related-sites::after {
-  opacity: 0;
-}
 .site-item {
   display: block;
-  width: 285px;
-  height: 85px;
+  width: 280px;
+  height: 80px;
   border-radius: 8px;
-  padding: 20px;
   display: flex;
   align-items: center;
   transition: .4s;
+  border: 1px solid var(--color-silver);
+  margin-bottom: 10px;
 }
 .site-item:hover {
   background-color: var(--color-lightmain);
@@ -423,7 +374,7 @@ article:last-child {
 }
 .site-item img {
  height: 75px;
- margin-right: 10px;
+ margin: 10px 5px;
 }
 .site-item h3 span {
   font-size: 14px;
@@ -440,20 +391,15 @@ article:last-child {
 }
 .announcement li a {
   display: inline-block;
-
 }
 .announcement li a:hover {
   font-weight: bold;
-}
-.announcement li a em {
-
 }
 .announcement span {
   float: right;
   font-size: 14px;
   color: gray;
 }
-
 /* 전체보기 button */
 .announcement > a {
   top: 3px;
@@ -508,8 +454,20 @@ article:last-child {
 }
 .main-activity-item img {
   width: 100%;
-  margin-bottom: 3px;
+  transition: 0.8s;
 }
+.main-activity-item div {
+  overflow: hidden;
+  width: 335px;
+  height: 225px;
+  margin-bottom: 13px;
+}
+.main-activity-item:nth-child(3) div {
+  border: 1px solid var(--color-gray);
+}
+.main-activity-item:hover img {
+  transform: scale(1.2);
+} 
 .main-activity-item h3 {
   font-size: 18px;
   overflow: hidden;
@@ -519,8 +477,8 @@ article:last-child {
 
 /* 전체보기 button */
 .main-activity-content > a {
-  top: 80px;
-  right: 30px;
+  top: 97px;
+  right: 50px;
 }
 
 /* 05 holt-family */
@@ -550,7 +508,8 @@ article:last-child {
 /* holt-slider button */
 .holt-slider .slick-prev,
 .holt-slider .slick-next {
-  border: 1px solid var(--color-gray);
+  background-color: var(--color-gray);
+  border: none;
   font-size: 0;
   width: 25px;
   height: 25px;
@@ -559,11 +518,11 @@ article:last-child {
 }
 .holt-slider .slick-prev {
   top: -35px;
-  right: 45px;
+  right: 30px;
 }
 .holt-slider .slick-next {
   top: -35px;
-  right: 15px;
+  right: 0px;
 }
 .holt-slider .slick-prev::before,
 .holt-slider .slick-next::before {
@@ -571,11 +530,11 @@ article:last-child {
   font-size: 12px;
   font-weight: 600;
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: 0;
   width: 100%;
   height: 100%;
-  color: var(--color-gray);
+  color: white;
 }
 .holt-slider .slick-prev::before {
   content:'\f060';
